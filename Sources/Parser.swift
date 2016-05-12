@@ -22,6 +22,9 @@ class Parser {
         var inEvent = false
         var currentEvent: Event? = nil
 
+        var inAlarm = false
+        var currentAlarm: Alarm? = nil
+
         for (_ , line) in reader.enumerate() {
 
             switch line {
@@ -40,8 +43,17 @@ class Parser {
                 continue
             case "END:VEVENT":
                 inEvent = false
-                currentCalendar?.appendEvent(currentEvent)
+                currentCalendar?.append(currentEvent)
                 currentEvent = nil
+                continue
+            case "BEGIN:VALARM":
+                inAlarm = true
+                currentAlarm = Alarm()
+                continue
+            case "END:VALARM":
+                inAlarm = false
+                currentEvent?.append(currentAlarm)
+                currentAlarm = nil
                 continue
             default:
                 break
@@ -53,8 +65,12 @@ class Parser {
                 currentCalendar?.addAttribute(key, value)
             }
 
-            if inEvent {
+            if inEvent && !inAlarm {
                 currentEvent?.addAttribute(key, value)
+            }
+
+            if inAlarm {
+                currentAlarm?.addAttribute(key, value)
             }
         }
 

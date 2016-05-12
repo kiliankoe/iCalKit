@@ -1,6 +1,7 @@
 import Foundation
 
 struct Alarm {
+    var subComponents = [CalendarComponent]()
     var otherAttrs = [String:String]()
 }
 
@@ -19,7 +20,7 @@ extension Alarm: CalendarComponent {
             str += "\(key):\(val)\n"
         }
 
-        str += "END:VALARM\n"
+        str += "END:VALARM"
         return str
     }
 }

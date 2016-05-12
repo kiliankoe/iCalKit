@@ -1,6 +1,9 @@
 import Foundation
 
 struct Event {
+    var subComponents = [CalendarComponent]()
+    var otherAttrs = [String:String]()
+
     // required
     var uid: String!
     var dtstamp: NSDate!
@@ -13,8 +16,6 @@ struct Event {
     // var class: some enum type?
     var dtstart: NSDate?
     var dtend: NSDate?
-
-    var otherAttrs = [String:String]()
 
     init(uid: String? = NSUUID().UUIDString, dtstamp: NSDate? = NSDate()) {
         self.uid = uid
@@ -73,6 +74,10 @@ extension Event: CalendarComponent {
 
         for (key, val) in otherAttrs {
             str += "\(key):\(val)\n"
+        }
+
+        for component in subComponents {
+            str += "\(component.toICal())\n"
         }
 
         str += "END:VEVENT"

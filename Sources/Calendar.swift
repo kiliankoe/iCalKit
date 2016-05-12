@@ -1,16 +1,9 @@
 struct Calendar {
-    var events = [Event]()
-
+    var subComponents = [CalendarComponent]()
     var otherAttrs = [String:String]()
 
     init() {
 
-    }
-
-    mutating func appendEvent(event: Event?) {
-        if let event = event {
-            events.append(event)
-        }
     }
 }
 
@@ -29,8 +22,8 @@ extension Calendar: CalendarComponent {
             str += "\(key):\(val)\n"
         }
 
-        for event in events {
-            str += "\(event.toICal())\n"
+        for component in subComponents {
+            str += "\(component.toICal())\n"
         }
 
         str += "END:VCALENDAR"
