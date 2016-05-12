@@ -9,7 +9,7 @@ struct Event {
     // var organizer: Organizer? = nil
     var location: String?
     var summary: String?
-    var description: String?// probably shouldn't call this description
+    var descr: String?
     // var class: some enum type?
     var dtstart: NSDate?
     var dtend: NSDate?
@@ -38,7 +38,7 @@ extension Event: CalendarComponent {
         case "SUMMARY":
             summary = value
         case "DESCRIPTION":
-            description = value
+            descr = value
         default:
             otherAttrs[attr] = value
         }
@@ -59,8 +59,8 @@ extension Event: CalendarComponent {
             str += "SUMMARY:\(summary)\n"
         }
 
-        if let description = description {
-            str += "DESCRIPTION:\(description)\n"
+        if let descr = descr {
+            str += "DESCRIPTION:\(descr)\n"
         }
 
         if let dtstart = dtstart {
@@ -84,4 +84,10 @@ extension Event: Equatable {}
 
 func ==(lhs: Event, rhs: Event) -> Bool {
     return lhs.uid == rhs.uid
+}
+
+extension Event: CustomStringConvertible {
+    var description: String {
+        return "\(iCal.stringFromDate(dtstamp)): \(summary ?? "")"
+    }
 }
