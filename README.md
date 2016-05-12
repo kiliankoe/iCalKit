@@ -35,3 +35,37 @@ Features to support:
  - [ ] Generate iCal files
 
 Also see the ruby lib [icalendar](https://github.com/icalendar/icalendar) as somewhat of a goal where this should be headed.
+
+### Quickstart
+
+Here's some quick examples of what's possible. Beware though that neither is the API currently stable nor are the types complete yet.
+This might as well also be outdated, but some basic examples are always nice to have.
+
+```swift
+var event = Event() // If no further params are supplied, only `uid` and `dtstamp` are set.
+event.summary = "Awesome event"
+print(event) // 20160513T003222+0200: Awesome event!
+
+var calendar = Calendar()
+calendar.appendEvent(event)
+
+let iCalString = calendar.toICal()
+print(iCalString)
+
+// BEGIN:VCALENDAR
+// BEGIN:VEVENT
+// UID:598C754E-A90A-4862-AAA6-E52BFFE3439F
+// DTSTAMP:20160513T003547+0200
+// SUMMARY:Awesome event
+// END:VEVENT
+// END:VCALENDAR
+```
+
+```swift
+// Future interaction will be via iCal class and not Parser
+
+let parser = try! Parser(path: "example.ics")
+let cals: [Calendar] = try! parser.read()
+
+// Do something with parsed iCal data
+```
