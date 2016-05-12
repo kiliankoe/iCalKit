@@ -16,8 +16,9 @@ struct Event {
 
     var otherAttrs = [String:String]()
 
-    init() {
-
+    init(uid: String? = NSUUID().UUIDString, dtstamp: NSDate? = NSDate()) {
+        self.uid = uid
+        self.dtstamp = dtstamp
     }
 }
 
