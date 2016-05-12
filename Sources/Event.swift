@@ -48,6 +48,22 @@ extension Event: CalendarElement {
         str += "UID:\(uid)\n"
         str += "DTSTAMP:\(iCal.stringFromDate(stamp))\n"
 
+        if let summary = summary {
+            str += "SUMMARY:\(summary)\n"
+        }
+
+        if let description = description {
+            str += "DESCRIPTION:\(description)\n"
+        }
+
+        if let start = start {
+            str += "DTSTART:\(iCal.stringFromDate(start))\n"
+        }
+
+        if let end = end {
+            str += "DTEND:\(iCal.stringFromDate(end))\n"
+        }
+
         for (key, val) in otherAttrs {
             str += "\(key):\(val)\n"
         }
