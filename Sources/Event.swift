@@ -45,8 +45,14 @@ extension Event: CalendarElement {
 
     func toICal() -> String {
         var str = "BEGIN:VEVENT\n"
-        str += "UID:\(uid)\n"
-        str += "DTSTAMP:\(iCal.stringFromDate(stamp))\n"
+
+        if let uid = uid {
+            str += "UID:\(uid)\n"
+        }
+
+        if let stamp = stamp {
+            str += "DTSTAMP:\(iCal.stringFromDate(stamp))\n"
+        }
 
         if let summary = summary {
             str += "SUMMARY:\(summary)\n"
