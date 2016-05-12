@@ -3,7 +3,7 @@ import Foundation
 struct Event {
     // required
     var uid: String!
-    var stamp: NSDate!
+    var dtstamp: NSDate!
 
     // optional
     // var organizer: Organizer? = nil
@@ -11,8 +11,8 @@ struct Event {
     var summary: String?
     var description: String?// probably shouldn't call this description
     // var class: some enum type?
-    var start: NSDate?
-    var end: NSDate?
+    var dtstart: NSDate?
+    var dtend: NSDate?
 
     var otherAttrs = [String:String]()
 
@@ -27,11 +27,11 @@ extension Event: CalendarComponent {
         case "UID":
             uid = value
         case "DTSTAMP":
-            stamp = iCal.dateFromString(value)
+            dtstamp = iCal.dateFromString(value)
         case "DTSTART":
-            start = iCal.dateFromString(value)
+            dtstart = iCal.dateFromString(value)
         case "DTEND":
-            end = iCal.dateFromString(value)
+            dtend = iCal.dateFromString(value)
         // case "ORGANIZER":
         //     organizer
         case "SUMMARY":
@@ -50,8 +50,8 @@ extension Event: CalendarComponent {
             str += "UID:\(uid)\n"
         }
 
-        if let stamp = stamp {
-            str += "DTSTAMP:\(iCal.stringFromDate(stamp))\n"
+        if let dtstamp = dtstamp {
+            str += "DTSTAMP:\(iCal.stringFromDate(dtstamp))\n"
         }
 
         if let summary = summary {
@@ -62,12 +62,12 @@ extension Event: CalendarComponent {
             str += "DESCRIPTION:\(description)\n"
         }
 
-        if let start = start {
-            str += "DTSTART:\(iCal.stringFromDate(start))\n"
+        if let dtstart = dtstart {
+            str += "DTSTART:\(iCal.stringFromDate(dtstart))\n"
         }
 
-        if let end = end {
-            str += "DTEND:\(iCal.stringFromDate(end))\n"
+        if let dtend = dtend {
+            str += "DTEND:\(iCal.stringFromDate(dtend))\n"
         }
 
         for (key, val) in otherAttrs {
