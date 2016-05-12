@@ -1,7 +1,11 @@
 import Foundation
 
 struct Event {
-    var uid: String? = nil
+    // required
+    var uid: String!
+    var stamp: NSDate!
+
+    // optional
     // var organizer: Organizer? = nil
     var location: String? = nil
     var summary: String? = nil
@@ -9,7 +13,6 @@ struct Event {
     // var class: some enum type?
     var start: NSDate? = nil
     var end: NSDate? = nil
-    var stamp: NSDate? = nil
 
     var otherAttrs = [String:String]()
 
