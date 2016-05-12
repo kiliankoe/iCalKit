@@ -42,6 +42,19 @@ extension Event: CalendarElement {
             otherAttrs[attr] = value
         }
     }
+
+    func toICal() -> String {
+        var str = "BEGIN:VEVENT\n"
+        str += "UID:\(uid)\n"
+        str += "DTSTAMP:\(iCal.stringFromDate(stamp))\n"
+
+        for (key, val) in otherAttrs {
+            str += "\(key):\(val)\n"
+        }
+
+        str += "END:VEVENT"
+        return str
+    }
 }
 
 extension Event: Equatable {}

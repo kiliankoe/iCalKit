@@ -21,4 +21,19 @@ extension Calendar: CalendarElement {
             otherAttrs[attr] = value
         }
     }
+
+    func toICal() -> String {
+        var str = "BEGIN:VCALENDAR\n"
+
+        for (key, val) in otherAttrs {
+            str += "\(key):\(val)\n"
+        }
+
+        for event in events {
+            str += "\(event.toICal())\n"
+        }
+
+        str += "END:VCALENDAR"
+        return str
+    }
 }
