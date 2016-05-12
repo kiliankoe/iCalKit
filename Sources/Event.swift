@@ -7,12 +7,12 @@ struct Event {
 
     // optional
     // var organizer: Organizer? = nil
-    var location: String? = nil
-    var summary: String? = nil
-    var description: String? = nil // probably shouldn't call this description
+    var location: String?
+    var summary: String?
+    var description: String?// probably shouldn't call this description
     // var class: some enum type?
-    var start: NSDate? = nil
-    var end: NSDate? = nil
+    var start: NSDate?
+    var end: NSDate?
 
     var otherAttrs = [String:String]()
 
