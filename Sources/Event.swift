@@ -21,7 +21,7 @@ struct Event {
     }
 }
 
-extension Event: CalendarElement {
+extension Event: CalendarComponent {
     mutating func addAttribute(attr: String, _ value: String) {
         switch attr {
         case "UID":

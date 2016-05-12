@@ -14,7 +14,7 @@ struct Calendar {
     }
 }
 
-extension Calendar: CalendarElement {
+extension Calendar: CalendarComponent {
     mutating func addAttribute(attr: String, _ value: String) {
         switch attr {
         default:
