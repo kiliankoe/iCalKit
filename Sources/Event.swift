@@ -43,3 +43,9 @@ extension Event: CalendarElement {
         }
     }
 }
+
+extension Event: Equatable {}
+
+func ==(lhs: Event, rhs: Event) -> Bool {
+    return lhs.uid == rhs.uid
+}
