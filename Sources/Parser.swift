@@ -28,17 +28,21 @@ class Parser {
             case "BEGIN:VCALENDAR":
                 inCalendar = true
                 currentCalendar = Calendar()
+                continue
             case "END:VCALENDAR":
                 inCalendar = false
                 completeCal.append(currentCalendar)
                 currentCalendar = nil
+                continue
             case "BEGIN:VEVENT":
                 inEvent = true
                 currentEvent = Event()
+                continue
             case "END:VEVENT":
                 inEvent = false
                 currentCalendar?.appendEvent(currentEvent)
                 currentEvent = nil
+                continue
             default:
                 break
             }
