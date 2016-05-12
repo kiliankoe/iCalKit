@@ -26,8 +26,12 @@ extension Event: CalendarElement {
         switch attr {
         case "UID":
             uid = value
-        // case "DTSTAMP":
-        //     stamp = value
+        case "DTSTAMP":
+            stamp = iCal.dateFromString(value)
+        case "DTSTART":
+            start = iCal.dateFromString(value)
+        case "DTEND":
+            end = iCal.dateFromString(value)
         // case "ORGANIZER":
         //     organizer
         case "SUMMARY":
