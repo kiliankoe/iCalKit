@@ -48,9 +48,7 @@ public class iCal {
 
     static let dateFormatter: NSDateFormatter = {
         let dateFormatter = NSDateFormatter()
-        // FIXME: This isn't quite correct. It works for parsing, but not for stringifying a date
-        // output `should be 20160512T225845Z, but is 20160512T225845+0200
-        dateFormatter.dateFormat = "yyyyMMdd'T'HHmmssZ"
+        dateFormatter.dateFormat = "yyyyMMdd'T'HHmmss'Z'"
         return dateFormatter
     }()
 }
