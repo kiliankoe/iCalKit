@@ -2,8 +2,10 @@ struct Calendar {
     var subComponents = [CalendarComponent]()
     var otherAttrs = [String:String]()
 
-    init() {
-
+    init(withComponents components: [CalendarComponent]? = nil) {
+        if let components = components {
+            self.subComponents = components
+        }
     }
 }
 
