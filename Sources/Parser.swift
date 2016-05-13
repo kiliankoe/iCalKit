@@ -1,13 +1,27 @@
+import Foundation
 
 class Parser {
-    let reader: StreamReader
+    let icsContent: [String]
 
-    init(path: String) throws {
-        if let reader = StreamReader(path: path) {
-            self.reader = reader
-            return
+    init(withPath path: String) throws {
+        guard let reader = StreamReader(path: path) else { throw iCalError.FileNotFound }
+
+        var content = [String]()
+        for line in reader {
+            content.append(line)
         }
-        throw iCalError.FileNotFound
+        icsContent = content
+    }
+
+    init(withString string: String) throws {
+        icsContent = string.splitNewlines()
+    }
+
+    init(withURL url: NSURL) throws {
+        guard let data = NSData(contentsOfURL: url) else { throw iCalError.FileNotFound }
+        guard let string = String(data: data, encoding: NSUTF8StringEncoding) else { throw iCalError.Encoding }
+
+        icsContent = string.splitNewlines()
     }
 
     func read() throws -> [Calendar] {
@@ -25,7 +39,7 @@ class Parser {
         var inAlarm = false
         var currentAlarm: Alarm? = nil
 
-        for (_ , line) in reader.enumerate() {
+        for (_ , line) in icsContent.enumerate() {
 
             switch line {
             case "BEGIN:VCALENDAR":

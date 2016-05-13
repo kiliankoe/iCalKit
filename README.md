@@ -31,8 +31,9 @@ Types to support:
 
 Features to support:
 
- - [ ] Pull iCal file from web
- - [ ] Generate iCal files
+ - [X] Pull iCal file from web
+ - [X] Generate iCal files
+ - [ ] Validate iCal files
 
 Also see the ruby lib [icalendar](https://github.com/icalendar/icalendar) as somewhat of a goal where this should be headed.
 
