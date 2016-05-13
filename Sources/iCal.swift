@@ -3,12 +3,10 @@ import Foundation
 public class iCal {
 
     public static func loadFile(path: String) throws -> [Calendar] {
-        guard let reader = StreamReader(path: path) else { throw iCalError.FileNotFound }
+        guard let data = NSData(contentsOfFile: path) else { throw iCalError.FileNotFound }
+        guard let string = String(data: data, encoding: NSUTF8StringEncoding) else { throw iCalError.Encoding }
 
-        var icsContent = [String]()
-        for line in reader {
-            icsContent.append(line)
-        }
+        let icsContent = string.splitNewlines()
 
         return parse(icsContent)
     }
