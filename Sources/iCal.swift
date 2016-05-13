@@ -1,8 +1,8 @@
 import Foundation
 
-class iCal {
+public class iCal {
 
-    static func loadFile(path: String) throws -> [Calendar] {
+    public static func loadFile(path: String) throws -> [Calendar] {
         guard let reader = StreamReader(path: path) else { throw iCalError.FileNotFound }
 
         var icsContent = [String]()
@@ -13,13 +13,13 @@ class iCal {
         return parse(icsContent)
     }
 
-    static func loadString(string: String) -> [Calendar] {
+    public static func loadString(string: String) -> [Calendar] {
         let icsContent = string.splitNewlines()
 
         return parse(icsContent)
     }
 
-    static func loadURL(url: NSURL) throws -> [Calendar] {
+    public static func loadURL(url: NSURL) throws -> [Calendar] {
         guard let data = NSData(contentsOfURL: url) else { throw iCalError.FileNotFound }
         guard let string = String(data: data, encoding: NSUTF8StringEncoding) else { throw iCalError.Encoding }
 
@@ -40,11 +40,11 @@ class iCal {
 
     // Convenience and Util functions
 
-    static func dateFromString(string: String) -> NSDate? {
+    public static func dateFromString(string: String) -> NSDate? {
         return iCal.dateFormatter.dateFromString(string)
     }
 
-    static func stringFromDate(date: NSDate) -> String {
+    public static func stringFromDate(date: NSDate) -> String {
         return iCal.dateFormatter.stringFromDate(date)
     }
 

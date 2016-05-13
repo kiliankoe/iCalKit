@@ -1,30 +1,30 @@
 import Foundation
 
-struct Event {
-    var subComponents = [CalendarComponent]()
-    var otherAttrs = [String:String]()
+public struct Event {
+    public var subComponents = [CalendarComponent]()
+    public var otherAttrs = [String:String]()
 
     // required
-    var uid: String!
-    var dtstamp: NSDate!
+    public var uid: String!
+    public var dtstamp: NSDate!
 
     // optional
-    // var organizer: Organizer? = nil
-    var location: String?
-    var summary: String?
-    var descr: String?
-    // var class: some enum type?
-    var dtstart: NSDate?
-    var dtend: NSDate?
+    // public var organizer: Organizer? = nil
+    public var location: String?
+    public var summary: String?
+    public var descr: String?
+    // public var class: some enum type?
+    public var dtstart: NSDate?
+    public var dtend: NSDate?
 
-    init(uid: String? = NSUUID().UUIDString, dtstamp: NSDate? = NSDate()) {
+    public init(uid: String? = NSUUID().UUIDString, dtstamp: NSDate? = NSDate()) {
         self.uid = uid
         self.dtstamp = dtstamp
     }
 }
 
 extension Event: CalendarComponent {
-    mutating func addAttribute(attr: String, _ value: String) {
+    public mutating func addAttribute(attr: String, _ value: String) {
         switch attr {
         case "UID":
             uid = value
@@ -45,7 +45,7 @@ extension Event: CalendarComponent {
         }
     }
 
-    func toICal() -> String {
+    public func toICal() -> String {
         var str = "BEGIN:VEVENT\n"
 
         if let uid = uid {
@@ -87,12 +87,12 @@ extension Event: CalendarComponent {
 
 extension Event: Equatable {}
 
-func ==(lhs: Event, rhs: Event) -> Bool {
+public func ==(lhs: Event, rhs: Event) -> Bool {
     return lhs.uid == rhs.uid
 }
 
 extension Event: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         return "\(iCal.stringFromDate(dtstamp)): \(summary ?? "")"
     }
 }

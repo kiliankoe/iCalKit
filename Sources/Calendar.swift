@@ -1,8 +1,8 @@
-struct Calendar {
-    var subComponents = [CalendarComponent]()
-    var otherAttrs = [String:String]()
+public struct Calendar {
+    public var subComponents = [CalendarComponent]()
+    public var otherAttrs = [String:String]()
 
-    init(withComponents components: [CalendarComponent]? = nil) {
+    public init(withComponents components: [CalendarComponent]? = nil) {
         if let components = components {
             self.subComponents = components
         }
@@ -10,14 +10,14 @@ struct Calendar {
 }
 
 extension Calendar: CalendarComponent {
-    mutating func addAttribute(attr: String, _ value: String) {
+    public mutating func addAttribute(attr: String, _ value: String) {
         switch attr {
         default:
             otherAttrs[attr] = value
         }
     }
 
-    func toICal() -> String {
+    public func toICal() -> String {
         var str = "BEGIN:VCALENDAR\n"
 
         for (key, val) in otherAttrs {

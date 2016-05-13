@@ -1,4 +1,4 @@
-protocol CalendarComponent {
+public protocol CalendarComponent {
     var subComponents: [CalendarComponent] { get set }
     var otherAttrs: [String:String] { get set }
 
@@ -9,7 +9,7 @@ protocol CalendarComponent {
 }
 
 extension CalendarComponent {
-    mutating func append(component: CalendarComponent?) {
+    public mutating func append(component: CalendarComponent?) {
         if let component = component {
             subComponents.append(component)
         }

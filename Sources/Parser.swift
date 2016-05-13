@@ -1,6 +1,6 @@
 import Foundation
 
-class Parser {
+internal class Parser {
     let icsContent: [String]
 
     init(_ ics: [String]) {
