@@ -19,24 +19,6 @@ END:VEVENT
 END:VCALENDAR
 ```
 
-### Roadmap
-
-Types to support:
-
- - [ ] VCALENDAR
- - [ ] VEVENT
- - [ ] VALARM
- - [ ] VTODO
- - & other stuff, see [RFC 5545](https://tools.ietf.org/html/rfc5545) for details
-
-Features to support:
-
- - [X] Pull iCal file from web
- - [X] Generate iCal files
- - [ ] Validate iCal files
-
-Also see the ruby lib [icalendar](https://github.com/icalendar/icalendar) as somewhat of a goal where this should be headed.
-
 ### Quickstart
 
 Here's some quick examples of what's possible. Beware though that neither is the API currently stable nor are the types complete yet.
@@ -63,11 +45,64 @@ print(iCalString)
 
 ```swift
 let url = NSURL(string: "https://raw.githubusercontent.com/kiliankoe/iCal/master/example.ics")!
-let cals = try! iCal.loadURL(url)
+let cals = try! iCal.loadURL(url) 
+// or loadFile() or loadString(), all of which return [Calendar] as an ics file can contain multiple calendars
 
 for cal in cals {
     for event in cal.subComponents where event is Event {
         print(event)
     }
 }
+```
+
+### Roadmap
+
+Main ToDos:
+
+ - [ ] Implement most of everything in [RFC 5545](https://tools.ietf.org/html/rfc5545)
+ - [ ] Validate iCal files
+
+Also see the ruby gem [icalendar](https://github.com/icalendar/icalendar) as a broad goal where this should be headed.
+
+Given complete freedom and a good bit of time, I'd love to implement an API something like the following.
+Huge kudos for the idea goes to @hoodie!
+
+It's very debatable though and just an idea for now. Got any additional ideas? Just open an issue or PR and we can discuss it 😊
+
+```swift
+// date could stand for an NSDate or something equivalent
+
+let importantMeeting.startDate(date)
+                    .repeats(.BiWeekly)
+
+let importantMeeting.startDate(date)
+                    .every(.Days(7))
+
+let birthday = Event.startDate(date)
+                    .repeats(.Anually)
+
+let xmas = Event.every(.December(24))
+
+let sysadminday = Event.every(.July.last.Friday)
+
+let tdo = Todo("buy milk")
+
+let alarm = Alarm("get up").at("05:30").every(.Thursday)
+let alarm = Alarm("get up").at("06:00").on(.Fridays)
+
+let dontDisturb = Busy.between(date).and(date)
+let dontDisturb = Busy.between("09..<12").am().on(.Mondays)
+
+let dearDiary = Journal(description: "Dear Diary\nToday my cat ran away. Now I'm sad")
+
+let event = Event("this is a summary")
+    .startDate(date)
+    .endDate(date)
+    .description("some description that is more descriptive that the summary")
+    .attendee("mailto:john.doe@example.com")
+    .attendee(Attendee("jane.doe@example.com").hasDeclined())
+    .attendee(Attendee("jim.doe@example.com").hasAccepted())
+    .trigger("-PT15M")
+    .repeatsEvery(.Wednesday)
+    .ipClass(.Private)
 ```
