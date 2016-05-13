@@ -45,7 +45,7 @@ print(iCalString)
 
 ```swift
 let url = NSURL(string: "https://raw.githubusercontent.com/kiliankoe/iCal/master/example.ics")!
-let cals = try! iCal.loadURL(url) 
+let cals = try! iCal.loadURL(url)
 // or loadFile() or loadString(), all of which return [Calendar] as an ics file can contain multiple calendars
 
 for cal in cals {
@@ -53,6 +53,9 @@ for cal in cals {
         print(event)
     }
 }
+
+// 19970714T190000+0200: Bastille Day Party
+// 19980714T190000+0200: Something completely different
 ```
 
 ### Roadmap
@@ -65,7 +68,7 @@ Main ToDos:
 Also see the ruby gem [icalendar](https://github.com/icalendar/icalendar) as a broad goal where this should be headed.
 
 Given complete freedom and a good bit of time, I'd love to implement an API something like the following.
-Huge kudos for the idea goes to @hoodie!
+Huge kudos for the idea goes to [@hoodie](https://github.com/hoodie)!
 
 It's very debatable though and just an idea for now. Got any additional ideas? Just open an issue or PR and we can discuss it 😊
 
