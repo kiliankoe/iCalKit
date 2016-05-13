@@ -3,7 +3,7 @@ import Foundation
 let cals = try! iCal.loadFile("example.ics")
 
 for cal in cals {
-    print(cal.toICal())
+    print(cal.toCal())
 }
 
 // for cal in cals {

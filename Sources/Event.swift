@@ -45,7 +45,7 @@ extension Event: CalendarComponent {
         }
     }
 
-    public func toICal() -> String {
+    public func toCal() -> String {
         var str = "BEGIN:VEVENT\n"
 
         if let uid = uid {
@@ -77,7 +77,7 @@ extension Event: CalendarComponent {
         }
 
         for component in subComponents {
-            str += "\(component.toICal())\n"
+            str += "\(component.toCal())\n"
         }
 
         str += "END:VEVENT"

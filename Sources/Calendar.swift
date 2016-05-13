@@ -17,7 +17,7 @@ extension Calendar: CalendarComponent {
         }
     }
 
-    public func toICal() -> String {
+    public func toCal() -> String {
         var str = "BEGIN:VCALENDAR\n"
 
         for (key, val) in otherAttrs {
@@ -25,7 +25,7 @@ extension Calendar: CalendarComponent {
         }
 
         for component in subComponents {
-            str += "\(component.toICal())\n"
+            str += "\(component.toCal())\n"
         }
 
         str += "END:VCALENDAR"

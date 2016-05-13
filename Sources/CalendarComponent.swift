@@ -5,7 +5,7 @@ public protocol CalendarComponent {
     mutating func addAttribute(attr: String, _ value: String)
     mutating func append(component: CalendarComponent?)
 
-    func toICal() -> String
+    func toCal() -> String
 }
 
 extension CalendarComponent {

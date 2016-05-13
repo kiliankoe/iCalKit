@@ -13,7 +13,7 @@ extension Alarm: CalendarComponent {
         }
     }
 
-    func toICal() -> String {
+    func toCal() -> String {
         var str = "BEGIN:VALARM\n"
 
         for (key, val) in otherAttrs {

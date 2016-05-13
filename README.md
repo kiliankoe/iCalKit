@@ -49,7 +49,7 @@ print(event) // 20160513T003222+0200: Awesome event!
 
 let calendar = Calendar(withComponents: [event])
 
-let iCalString = calendar.toICal()
+let iCalString = calendar.toCal()
 print(iCalString)
 
 // BEGIN:VCALENDAR
