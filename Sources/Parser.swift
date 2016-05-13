@@ -3,25 +3,8 @@ import Foundation
 class Parser {
     let icsContent: [String]
 
-    init(withPath path: String) throws {
-        guard let reader = StreamReader(path: path) else { throw iCalError.FileNotFound }
-
-        var content = [String]()
-        for line in reader {
-            content.append(line)
-        }
-        icsContent = content
-    }
-
-    init(withString string: String) throws {
-        icsContent = string.splitNewlines()
-    }
-
-    init(withURL url: NSURL) throws {
-        guard let data = NSData(contentsOfURL: url) else { throw iCalError.FileNotFound }
-        guard let string = String(data: data, encoding: NSUTF8StringEncoding) else { throw iCalError.Encoding }
-
-        icsContent = string.splitNewlines()
+    init(_ ics: [String]) {
+        icsContent = ics
     }
 
     func read() throws -> [Calendar] {

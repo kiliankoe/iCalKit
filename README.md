@@ -47,8 +47,7 @@ var event = Event() // If no further params are supplied, only `uid` and `dtstam
 event.summary = "Awesome event"
 print(event) // 20160513T003222+0200: Awesome event!
 
-var calendar = Calendar()
-calendar.appendEvent(event)
+let calendar = Calendar(withComponents: [event])
 
 let iCalString = calendar.toICal()
 print(iCalString)
@@ -63,10 +62,12 @@ print(iCalString)
 ```
 
 ```swift
-// Future interaction will be via iCal class and not Parser
+let url = NSURL(string: "https://raw.githubusercontent.com/kiliankoe/iCal/master/example.ics")!
+let cals = try! iCal.loadURL(url)
 
-let parser = try! Parser(path: "example.ics")
-let cals: [Calendar] = try! parser.read()
-
-// Do something with parsed iCal data
+for cal in cals {
+    for event in cal.subComponents where event is Event {
+        print(event)
+    }
+}
 ```

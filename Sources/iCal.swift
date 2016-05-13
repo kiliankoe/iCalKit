@@ -1,6 +1,45 @@
 import Foundation
 
 class iCal {
+
+    static func loadFile(path: String) throws -> [Calendar] {
+        guard let reader = StreamReader(path: path) else { throw iCalError.FileNotFound }
+
+        var icsContent = [String]()
+        for line in reader {
+            icsContent.append(line)
+        }
+
+        return parse(icsContent)
+    }
+
+    static func loadString(string: String) -> [Calendar] {
+        let icsContent = string.splitNewlines()
+
+        return parse(icsContent)
+    }
+
+    static func loadURL(url: NSURL) throws -> [Calendar] {
+        guard let data = NSData(contentsOfURL: url) else { throw iCalError.FileNotFound }
+        guard let string = String(data: data, encoding: NSUTF8StringEncoding) else { throw iCalError.Encoding }
+
+        let icsContent = string.splitNewlines()
+
+        return parse(icsContent)
+    }
+
+    private static func parse(icsContent: [String]) -> [Calendar] {
+        let parser = Parser(icsContent)
+        do {
+            return try parser.read()
+        } catch let error {
+            print(error)
+            return []
+        }
+    }
+
+    // Convenience and Util functions
+
     static func dateFromString(string: String) -> NSDate? {
         return iCal.dateFormatter.dateFromString(string)
     }
@@ -11,7 +50,7 @@ class iCal {
 
     static let dateFormatter: NSDateFormatter = {
         let dateFormatter = NSDateFormatter()
-        // TODO: This isn't quite correct. It works for parsing, but not for stringifying a date
+        // FIXME: This isn't quite correct. It works for parsing, but not for stringifying a date
         // output `should be 20160512T225845Z, but is 20160512T225845+0200
         dateFormatter.dateFormat = "yyyyMMdd'T'HHmmssZ"
         return dateFormatter
