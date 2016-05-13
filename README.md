@@ -70,7 +70,7 @@ Also see the ruby gem [icalendar](https://github.com/icalendar/icalendar) as a b
 Given complete freedom and a good bit of time, I'd love to implement an API something like the following.
 Huge kudos for the idea goes to [@hoodie](https://github.com/hoodie)!
 
-It's very debatable though and just an idea for now. Got any additional ideas? Just open an issue or PR and we can discuss it 😊
+It's very debatable though and just an idea for now. Got any additional input? Just open an issue or PR and we can discuss it 😊
 
 ```swift
 // date could stand for an NSDate or something equivalent
