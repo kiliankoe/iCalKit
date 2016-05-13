@@ -1,19 +1,19 @@
 import Foundation
 
-struct Alarm {
-    var subComponents = [CalendarComponent]()
-    var otherAttrs = [String:String]()
+public struct Alarm {
+    public var subComponents = [CalendarComponent]()
+    public var otherAttrs = [String:String]()
 }
 
 extension Alarm: CalendarComponent {
-    mutating func addAttribute(attr: String, _ value: String) {
+    public mutating func addAttribute(attr: String, _ value: String) {
         switch attr {
             default:
                 otherAttrs[attr] = value
         }
     }
 
-    func toCal() -> String {
+    public func toCal() -> String {
         var str = "BEGIN:VALARM\n"
 
         for (key, val) in otherAttrs {
