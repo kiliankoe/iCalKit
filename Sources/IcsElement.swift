@@ -1,15 +1,15 @@
-public protocol CalendarComponent {
-    var subComponents: [CalendarComponent] { get set }
+public protocol IcsElement {
+    var subComponents: [IcsElement] { get set }
     var otherAttrs: [String:String] { get set }
 
     mutating func addAttribute(attr: String, _ value: String)
-    mutating func append(component: CalendarComponent?)
+    mutating func append(component: IcsElement?)
 
     func toCal() -> String
 }
 
-extension CalendarComponent {
-    public mutating func append(component: CalendarComponent?) {
+extension IcsElement {
+    public mutating func append(component: IcsElement?) {
         if let component = component {
             subComponents.append(component)
         }

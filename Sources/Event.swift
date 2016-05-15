@@ -1,7 +1,7 @@
 import Foundation
 
 public struct Event {
-    public var subComponents = [CalendarComponent]()
+    public var subComponents = [IcsElement]()
     public var otherAttrs = [String:String]()
 
     // required
@@ -23,7 +23,7 @@ public struct Event {
     }
 }
 
-extension Event: CalendarComponent {
+extension Event: IcsElement {
     public mutating func addAttribute(attr: String, _ value: String) {
         switch attr {
         case "UID":
