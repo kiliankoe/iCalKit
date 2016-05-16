@@ -1,5 +1,5 @@
 public protocol IcsElement {
-    var subComponents: [IcsElement] { get set }
+    var subComponents: [CalendarComponent] { get set }
     var otherAttrs: [String:String] { get set }
 
     mutating func addAttribute(attr: String, _ value: String)
@@ -9,7 +9,7 @@ public protocol IcsElement {
 }
 
 extension IcsElement {
-    public mutating func append(component: IcsElement?) {
+    public mutating func append(component: CalendarComponent?) {
         if let component = component {
             subComponents.append(component)
         }
