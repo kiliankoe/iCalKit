@@ -31,10 +31,6 @@
 		39747B291E9BCF9C00CF14B9 /* IcsElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B101E9BCF9C00CF14B9 /* IcsElement.swift */; };
 		39747B2A1E9BCF9C00CF14B9 /* IcsElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B101E9BCF9C00CF14B9 /* IcsElement.swift */; };
 		39747B2B1E9BCF9C00CF14B9 /* IcsElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B101E9BCF9C00CF14B9 /* IcsElement.swift */; };
-		39747B2C1E9BCF9C00CF14B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B111E9BCF9C00CF14B9 /* main.swift */; };
-		39747B2D1E9BCF9C00CF14B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B111E9BCF9C00CF14B9 /* main.swift */; };
-		39747B2E1E9BCF9C00CF14B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B111E9BCF9C00CF14B9 /* main.swift */; };
-		39747B2F1E9BCF9C00CF14B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B111E9BCF9C00CF14B9 /* main.swift */; };
 		39747B301E9BCF9C00CF14B9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B121E9BCF9C00CF14B9 /* Parser.swift */; };
 		39747B311E9BCF9C00CF14B9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B121E9BCF9C00CF14B9 /* Parser.swift */; };
 		39747B321E9BCF9C00CF14B9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B121E9BCF9C00CF14B9 /* Parser.swift */; };
@@ -43,6 +39,9 @@
 		39747B351E9BCF9C00CF14B9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* Util.swift */; };
 		39747B361E9BCF9C00CF14B9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* Util.swift */; };
 		39747B371E9BCF9C00CF14B9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* Util.swift */; };
+		39747B3A1E9C176200CF14B9 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 39747B391E9C176200CF14B9 /* example.ics */; };
+		39747B3B1E9C176200CF14B9 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 39747B391E9C176200CF14B9 /* example.ics */; };
+		39747B3C1E9C176200CF14B9 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 39747B391E9C176200CF14B9 /* example.ics */; };
 		52D6D9871BEFF229002C0205 /* iCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* iCal.framework */; };
 		52D6D9981BEFF375002C0205 /* iCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9961BEFF375002C0205 /* iCal.swift */; };
 		52D6D99B1BEFF375002C0205 /* iCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9971BEFF375002C0205 /* iCalTests.swift */; };
@@ -86,9 +85,9 @@
 		39747B0E1E9BCF9C00CF14B9 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Sources/Event.swift; sourceTree = "<group>"; };
 		39747B0F1E9BCF9C00CF14B9 /* iCalError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCalError.swift; path = Sources/iCalError.swift; sourceTree = "<group>"; };
 		39747B101E9BCF9C00CF14B9 /* IcsElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IcsElement.swift; path = Sources/IcsElement.swift; sourceTree = "<group>"; };
-		39747B111E9BCF9C00CF14B9 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/main.swift; sourceTree = "<group>"; };
 		39747B121E9BCF9C00CF14B9 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser.swift; sourceTree = "<group>"; };
 		39747B131E9BCF9C00CF14B9 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Util.swift; path = Sources/Util.swift; sourceTree = "<group>"; };
+		39747B391E9C176200CF14B9 /* example.ics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.ics; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* iCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* iCal-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iCal-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9961BEFF375002C0205 /* iCal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCal.swift; path = Sources/iCal.swift; sourceTree = "<group>"; };
@@ -162,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				52D6D9971BEFF375002C0205 /* iCalTests.swift */,
+				39747B391E9C176200CF14B9 /* example.ics */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -176,7 +176,6 @@
 				39747B0E1E9BCF9C00CF14B9 /* Event.swift */,
 				39747B0F1E9BCF9C00CF14B9 /* iCalError.swift */,
 				39747B101E9BCF9C00CF14B9 /* IcsElement.swift */,
-				39747B111E9BCF9C00CF14B9 /* main.swift */,
 				39747B121E9BCF9C00CF14B9 /* Parser.swift */,
 				39747B131E9BCF9C00CF14B9 /* Util.swift */,
 				39747B381E9BCFA600CF14B9 /* Tests */,
@@ -459,6 +458,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39747B3A1E9C176200CF14B9 /* example.ics in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +487,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39747B3B1E9C176200CF14B9 /* example.ics in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39747B3C1E9C176200CF14B9 /* example.ics in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +508,6 @@
 			files = (
 				52D6D9981BEFF375002C0205 /* iCal.swift in Sources */,
 				39747B181E9BCF9C00CF14B9 /* Calendar.swift in Sources */,
-				39747B2C1E9BCF9C00CF14B9 /* main.swift in Sources */,
 				39747B141E9BCF9C00CF14B9 /* Alarm.swift in Sources */,
 				39747B281E9BCF9C00CF14B9 /* IcsElement.swift in Sources */,
 				39747B301E9BCF9C00CF14B9 /* Parser.swift in Sources */,
@@ -531,7 +532,6 @@
 			files = (
 				52D6D9EA1BEFFFA4002C0205 /* iCal.swift in Sources */,
 				39747B1A1E9BCF9C00CF14B9 /* Calendar.swift in Sources */,
-				39747B2E1E9BCF9C00CF14B9 /* main.swift in Sources */,
 				39747B161E9BCF9C00CF14B9 /* Alarm.swift in Sources */,
 				39747B2A1E9BCF9C00CF14B9 /* IcsElement.swift in Sources */,
 				39747B321E9BCF9C00CF14B9 /* Parser.swift in Sources */,
@@ -548,7 +548,6 @@
 			files = (
 				52D6DA091BF00081002C0205 /* iCal.swift in Sources */,
 				39747B1B1E9BCF9C00CF14B9 /* Calendar.swift in Sources */,
-				39747B2F1E9BCF9C00CF14B9 /* main.swift in Sources */,
 				39747B171E9BCF9C00CF14B9 /* Alarm.swift in Sources */,
 				39747B2B1E9BCF9C00CF14B9 /* IcsElement.swift in Sources */,
 				39747B331E9BCF9C00CF14B9 /* Parser.swift in Sources */,
@@ -565,7 +564,6 @@
 			files = (
 				52D6DA261BF00118002C0205 /* iCal.swift in Sources */,
 				39747B191E9BCF9C00CF14B9 /* Calendar.swift in Sources */,
-				39747B2D1E9BCF9C00CF14B9 /* main.swift in Sources */,
 				39747B151E9BCF9C00CF14B9 /* Alarm.swift in Sources */,
 				39747B291E9BCF9C00CF14B9 /* IcsElement.swift in Sources */,
 				39747B311E9BCF9C00CF14B9 /* Parser.swift in Sources */,

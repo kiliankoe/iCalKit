@@ -11,13 +11,36 @@ import XCTest
 import iCal
 
 class iCalTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        //// XCTAssertEqual(iCal().text, "Hello, World!")
+    var exampleCals: [Calendar]?
+
+    override func setUp() {
+        let example = Bundle.main.path(forResource: "example", ofType: "ics")!
+        let url = URL(string: example)!
+
+        self.exampleCals = try! iCal.load(url: url)
+    }
+
+    func testLoadLocalFile() {
+        XCTAssert(exampleCals.count > 0)
+    }
+
+    func testEventData() {
+        let cal = exampleCals?.first!
+        for event in cal.components where event is Event {
+            XCTAssertEqual(event, "") // TODO
+        }
+    }
+
+    func testiCalString() {
+        var event = Event()
+        event.summary = "Awesome Event"
+        let cal = Calendar(withComponents: [event])
+        XCTAssertEqual(cal.asIcal, "") // TODO
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testLoadLocalFile", testLoadLocalFile),
+        ("testEventData", testEventData),
+        ("testiCalString", testiCalString),
     ]
 }
