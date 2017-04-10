@@ -6,7 +6,7 @@ public struct Event {
 
     // required
     public var uid: String!
-    public var dtstamp: NSDate!
+    public var dtstamp: Date!
 
     // optional
     // public var organizer: Organizer? = nil
@@ -14,10 +14,10 @@ public struct Event {
     public var summary: String?
     public var descr: String?
     // public var class: some enum type?
-    public var dtstart: NSDate?
-    public var dtend: NSDate?
+    public var dtstart: Date?
+    public var dtend: Date?
 
-    public init(uid: String? = NSUUID().UUIDString, dtstamp: NSDate? = NSDate()) {
+    public init(uid: String? = NSUUID().uuidString, dtstamp: Date? = Date()) {
         self.uid = uid
         self.dtstamp = dtstamp
     }

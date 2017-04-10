@@ -1,3 +1,3 @@
-protocol CalendarComponent {
+public protocol CalendarComponent {
     
 }

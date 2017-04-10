@@ -3,8 +3,13 @@ import Foundation
 public class iCal {
 
     public static func loadFile(path: String) throws -> [Calendar] {
-        guard let data = NSData(contentsOfFile: path) else { throw iCalError.FileNotFound }
-        guard let string = String(data: data, encoding: NSUTF8StringEncoding) else { throw iCalError.Encoding }
+        guard
+            let path = URL(string: path),
+            let data = try? Data(contentsOf: path),
+            let string = String(data: data, encoding: .utf8)
+        else {
+            throw iCalError.fileNotFound
+        }
 
         let icsContent = string.splitNewlines()
 
@@ -17,16 +22,16 @@ public class iCal {
         return parse(icsContent)
     }
 
-    public static func loadURL(url: NSURL) throws -> [Calendar] {
-        guard let data = NSData(contentsOfURL: url) else { throw iCalError.FileNotFound }
-        guard let string = String(data: data, encoding: NSUTF8StringEncoding) else { throw iCalError.Encoding }
+    public static func loadURL(url: URL) throws -> [Calendar] {
+        guard let data = try? Data(contentsOf: url) else { throw iCalError.fileNotFound }
+        guard let string = String(data: data, encoding: .utf8) else { throw iCalError.encoding }
 
         let icsContent = string.splitNewlines()
 
         return parse(icsContent)
     }
 
-    private static func parse(icsContent: [String]) -> [Calendar] {
+    private static func parse(_ icsContent: [String]) -> [Calendar] {
         let parser = Parser(icsContent)
         do {
             return try parser.read()
@@ -38,16 +43,16 @@ public class iCal {
 
     // Convenience and Util functions
 
-    public static func dateFromString(string: String) -> NSDate? {
-        return iCal.dateFormatter.dateFromString(string)
+    public static func dateFromString(_ string: String) -> Date? {
+        return iCal.dateFormatter.date(from: string)
     }
 
-    public static func stringFromDate(date: NSDate) -> String {
-        return iCal.dateFormatter.stringFromDate(date)
+    public static func stringFromDate(_ date: Date) -> String {
+        return iCal.dateFormatter.string(from: date)
     }
 
-    static let dateFormatter: NSDateFormatter = {
-        let dateFormatter = NSDateFormatter()
+    static let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMdd'T'HHmmss'Z'"
         return dateFormatter
     }()

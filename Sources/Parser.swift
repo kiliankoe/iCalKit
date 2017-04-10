@@ -21,8 +21,8 @@ internal class Parser {
 
         var inAlarm = false
         var currentAlarm: Alarm? = nil
+        for (_ , line) in icsContent.enumerated() {
 
-        for (_ , line) in icsContent.enumerate() {
 
             switch line {
             case "BEGIN:VCALENDAR":

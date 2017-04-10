@@ -1,6 +1,6 @@
-public enum iCalError: ErrorType {
-    case FileNotFound
-    case Encoding
-    case ParseError
-    case UnsupportedICalVersion
+public enum iCalError: Error {
+    case fileNotFound
+    case encoding
+    case parseError
+    case unsupportedICalVersion
 }
