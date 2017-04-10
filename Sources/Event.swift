@@ -29,11 +29,11 @@ extension Event: IcsElement {
         case "UID":
             uid = value
         case "DTSTAMP":
-            dtstamp = iCal.dateFromString(value)
+            dtstamp = iCal.date(from: value)
         case "DTSTART":
-            dtstart = iCal.dateFromString(value)
+            dtstart = iCal.date(from: value)
         case "DTEND":
-            dtend = iCal.dateFromString(value)
+            dtend = iCal.date(from: value)
         // case "ORGANIZER":
         //     organizer
         case "SUMMARY":
@@ -53,7 +53,7 @@ extension Event: IcsElement {
         }
 
         if let dtstamp = dtstamp {
-            str += "DTSTAMP:\(iCal.stringFromDate(dtstamp))\n"
+            str += "DTSTAMP:\(iCal.string(from: dtstamp))\n"
         }
 
         if let summary = summary {
@@ -65,11 +65,11 @@ extension Event: IcsElement {
         }
 
         if let dtstart = dtstart {
-            str += "DTSTART:\(iCal.stringFromDate(dtstart))\n"
+            str += "DTSTART:\(iCal.string(from: dtstart))\n"
         }
 
         if let dtend = dtend {
-            str += "DTEND:\(iCal.stringFromDate(dtend))\n"
+            str += "DTEND:\(iCal.string(from: dtend))\n"
         }
 
         for (key, val) in otherAttrs {

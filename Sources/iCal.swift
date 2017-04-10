@@ -43,11 +43,11 @@ public class iCal {
 
     // Convenience and Util functions
 
-    public static func dateFromString(_ string: String) -> Date? {
+    public static func date(from string: String) -> Date? {
         return iCal.dateFormatter.date(from: string)
     }
 
-    public static func stringFromDate(_ date: Date) -> String {
+    public static func string(from date: Date) -> String {
         return iCal.dateFormatter.string(from: date)
     }
 
