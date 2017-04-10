@@ -16,14 +16,8 @@ class iCalTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //// XCTAssertEqual(iCal().text, "Hello, World!")
     }
-}
 
-#if os(Linux)
-extension iCalTests {
-    static var allTests : [(String, (iCalTests) -> () throws -> Void)] {
-        return [
-            ("testExample", testExample),
-        ]
-    }
+    static var allTests = [
+        ("testExample", testExample),
+    ]
 }
-#endif
