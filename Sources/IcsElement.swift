@@ -1,12 +1,15 @@
+import Foundation
+
+/// TODO add documentation
 public protocol IcsElement {
     var subComponents: [CalendarComponent] { get set }
     var otherAttrs: [String:String] { get set }
 
+    /// TODO add documentation
     mutating func addAttribute(attr: String, _ value: String)
-    mutating func append(component: IcsElement?)
-
-    func toCal() -> String
-}
+    /// TODO add documentation
+    mutating func append(component: CalendarComponent?)
+} // End protocol
 
 extension IcsElement {
     public mutating func append(component: CalendarComponent?) {
@@ -14,4 +17,4 @@ extension IcsElement {
             subComponents.append(component)
         }
     }
-}
+} // End extension

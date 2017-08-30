@@ -7,27 +7,22 @@ internal class Parser {
         icsContent = ics
     }
 
-    func read() throws -> [Calendar] {
-
-        var completeCal = [Calendar?]()
+    func read() throws -> [CCalendar] {
+        var completeCal = [CCalendar?]()
 
         // Such state, much wow
-
         var inCalendar = false
-        var currentCalendar: Calendar? = nil
-
+        var currentCalendar: CCalendar?
         var inEvent = false
-        var currentEvent: Event? = nil
-
+        var currentEvent: Event?
         var inAlarm = false
-        var currentAlarm: Alarm? = nil
+        var currentAlarm: Alarm?
+
         for (_ , line) in icsContent.enumerated() {
-
-
             switch line {
             case "BEGIN:VCALENDAR":
                 inCalendar = true
-                currentCalendar = Calendar()
+                currentCalendar = CCalendar(withComponents: nil)
                 continue
             case "END:VCALENDAR":
                 inCalendar = false
@@ -40,7 +35,7 @@ internal class Parser {
                 continue
             case "END:VEVENT":
                 inEvent = false
-                currentCalendar?.append(currentEvent)
+                currentCalendar?.append(component: currentEvent)
                 currentEvent = nil
                 continue
             case "BEGIN:VALARM":
@@ -49,28 +44,28 @@ internal class Parser {
                 continue
             case "END:VALARM":
                 inAlarm = false
-                currentEvent?.append(currentAlarm)
+                currentEvent?.append(component: currentAlarm)
                 currentAlarm = nil
                 continue
             default:
                 break
-            }
+            } // End switch
 
             let (key, value) = line.toKeyValuePair(splittingOn: ":")
 
             if inCalendar && !inEvent {
-                currentCalendar?.addAttribute(key, value)
+                currentCalendar?.addAttribute(attr: key, value)
             }
 
             if inEvent && !inAlarm {
-                currentEvent?.addAttribute(key, value)
+                currentEvent?.addAttribute(attr: key, value)
             }
 
             if inAlarm {
-                currentAlarm?.addAttribute(key, value)
+                currentAlarm?.addAttribute(attr: key, value)
             }
         }
 
         return completeCal.flatMap{ $0 }
     }
-}
+} // End class

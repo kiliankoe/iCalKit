@@ -1,7 +1,8 @@
 import Foundation
 
+/// TODO add documentation
 public struct Event {
-    public var subComponents = [IcsElement]()
+    public var subComponents: [CalendarComponent] = []
     public var otherAttrs = [String:String]()
 
     // required
@@ -21,7 +22,42 @@ public struct Event {
         self.uid = uid
         self.dtstamp = dtstamp
     }
-}
+} // End struct
+
+extension Event: CalendarComponent {
+    public func toCal() -> String {
+        var str: String = "BEGIN:VEVENT\n"
+
+        guard let uid = uid,
+              let dtstamp = dtstamp,
+              let summary = summary,
+              let descr = descr,
+              let dtstart = dtstart,
+              let dtend = dtend
+            else {
+            str += "END:VEVENT"
+            return str
+        }
+        
+        str += "UID:\(uid)\n"
+        str += "DTSTAMP:\(iCal.string(from: dtstamp))\n"
+        str += "SUMMARY:\(summary)\n"
+        str += "DESCRIPTION:\(descr)\n"
+        str += "DTSTART:\(iCal.string(from: dtstart))\n"
+        str += "DTEND:\(iCal.string(from: dtend))\n"
+
+        for (key, val) in otherAttrs {
+            str += "\(key):\(val)\n"
+        }
+
+        for component in subComponents {
+            str += "\(component.toCal())\n"
+        }
+
+        str += "END:VEVENT"
+        return str
+    }
+} // End extension
 
 extension Event: IcsElement {
     public mutating func addAttribute(attr: String, _ value: String) {
@@ -44,48 +80,9 @@ extension Event: IcsElement {
             otherAttrs[attr] = value
         }
     }
+} // End extension
 
-    public func toCal() -> String {
-        var str = "BEGIN:VEVENT\n"
-
-        if let uid = uid {
-            str += "UID:\(uid)\n"
-        }
-
-        if let dtstamp = dtstamp {
-            str += "DTSTAMP:\(iCal.string(from: dtstamp))\n"
-        }
-
-        if let summary = summary {
-            str += "SUMMARY:\(summary)\n"
-        }
-
-        if let descr = descr {
-            str += "DESCRIPTION:\(descr)\n"
-        }
-
-        if let dtstart = dtstart {
-            str += "DTSTART:\(iCal.string(from: dtstart))\n"
-        }
-
-        if let dtend = dtend {
-            str += "DTEND:\(iCal.string(from: dtend))\n"
-        }
-
-        for (key, val) in otherAttrs {
-            str += "\(key):\(val)\n"
-        }
-
-        for component in subComponents {
-            str += "\(component.toCal())\n"
-        }
-
-        str += "END:VEVENT"
-        return str
-    }
-}
-
-extension Event: Equatable {}
+extension Event: Equatable { }
 
 public func ==(lhs: Event, rhs: Event) -> Bool {
     return lhs.uid == rhs.uid
@@ -93,6 +90,6 @@ public func ==(lhs: Event, rhs: Event) -> Bool {
 
 extension Event: CustomStringConvertible {
     public var description: String {
-        return "\(iCal.stringFromDate(dtstamp)): \(summary ?? "")"
+        return "\(iCal.string(from: dtstamp)): \(summary ?? "")"
     }
-}
+} // End extension

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/ds/Dev/iCal-fork/example.ics">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

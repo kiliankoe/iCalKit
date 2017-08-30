@@ -5,7 +5,7 @@ public enum iCal {
     ///
     /// - Parameter string: string to load
     /// - Returns: List of containted `Calendar`s
-    public static func load(string: String) -> [Calendar] {
+    public static func load(string: String) -> [CCalendar] {
         let icsContent = string.components(separatedBy: "\n")
         return parse(icsContent)
     }
@@ -18,13 +18,13 @@ public enum iCal {
     /// - Returns: List of contained `Calendar`s.
     /// - Throws: Error encountered during loading of URL or decoding of data.
     /// - Warning: This is a **synchronous** operation! Use `load(string:)` and fetch your data beforehand for async handling.
-    public static func load(url: URL, encoding: String.Encoding = .utf8) throws -> [Calendar] {
+    public static func load(url: URL, encoding: String.Encoding = .utf8) throws -> [CCalendar] {
         let data = try Data(contentsOf: url)
         guard let string = String(data: data, encoding: encoding) else { throw iCalError.encoding }
         return load(string: string)
     }
 
-    private static func parse(_ icsContent: [String]) -> [Calendar] {
+    private static func parse(_ icsContent: [String]) -> [CCalendar] {
         let parser = Parser(icsContent)
         do {
             return try parser.read()
@@ -34,8 +34,8 @@ public enum iCal {
         }
     }
 
-    // Convenience and Util functions
-
+    // MARK: - Convenience and Util functions
+    // TODO convert these to extension
     public static func date(from string: String) -> Date? {
         return iCal.dateFormatter.date(from: string)
     }
@@ -49,4 +49,4 @@ public enum iCal {
         dateFormatter.dateFormat = "yyyyMMdd'T'HHmmss'Z'"
         return dateFormatter
     }()
-}
+} // End enum
