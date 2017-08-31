@@ -32,7 +32,7 @@ extension Event: CalendarComponent {
             str += "UID:\(uid)\n"
         }
         if let dtstamp = dtstamp {
-            str += "DTSTAMP:\(iCal.string(from: dtstamp))\n"
+            str += "DTSTAMP:\(dtstamp.toString())\n"
         }
         if let summary = summary {
             str += "SUMMARY:\(summary)\n"
@@ -41,10 +41,10 @@ extension Event: CalendarComponent {
             str += "DESCRIPTION:\(descr)\n"
         }
         if let dtstart = dtstart {
-            str += "DTSTART:\(iCal.string(from: dtstart))\n"
+            str += "DTSTART:\(dtstart.toString())\n"
         }
         if let dtend = dtend {
-            str += "DTEND:\(iCal.string(from: dtend))\n"
+            str += "DTEND:\(dtend.toString())\n"
         }
 
         for (key, val) in otherAttrs {
@@ -66,11 +66,11 @@ extension Event: IcsElement {
         case "UID":
             uid = value
         case "DTSTAMP":
-            dtstamp = iCal.date(from: value)
+            dtstamp = value.toDate()
         case "DTSTART":
-            dtstart = iCal.date(from: value)
+            dtstart = value.toDate()
         case "DTEND":
-            dtend = iCal.date(from: value)
+            dtend = value.toDate()
         // case "ORGANIZER":
         //     organizer
         case "SUMMARY":
@@ -91,6 +91,6 @@ public func ==(lhs: Event, rhs: Event) -> Bool {
 
 extension Event: CustomStringConvertible {
     public var description: String {
-        return "\(iCal.string(from: dtstamp)): \(summary ?? "")"
+        return "\(dtstamp.toString()): \(summary ?? "")"
     }
 } // End extension

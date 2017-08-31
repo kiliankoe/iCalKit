@@ -1,5 +1,6 @@
 import Foundation
 
+/// TODO add documentation
 internal class Parser {
     let icsContent: [String]
 
@@ -7,12 +8,12 @@ internal class Parser {
         icsContent = ics
     }
 
-    func read() throws -> [CCalendar] {
-        var completeCal = [CCalendar?]()
+    func read() throws -> [Calendar] {
+        var completeCal = [Calendar?]()
 
         // Such state, much wow
         var inCalendar = false
-        var currentCalendar: CCalendar?
+        var currentCalendar: Calendar?
         var inEvent = false
         var currentEvent: Event?
         var inAlarm = false
@@ -22,7 +23,7 @@ internal class Parser {
             switch line {
             case "BEGIN:VCALENDAR":
                 inCalendar = true
-                currentCalendar = CCalendar(withComponents: nil)
+                currentCalendar = Calendar(withComponents: nil)
                 continue
             case "END:VCALENDAR":
                 inCalendar = false
@@ -52,7 +53,7 @@ internal class Parser {
             } // End switch
 
             guard let (key, value) = line.toKeyValuePair(splittingOn: ":") else {
-//                print("(key, value) is nil") // DEBUG
+                // print("(key, value) is nil") // DEBUG
                 continue
             }
 

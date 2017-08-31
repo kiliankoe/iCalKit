@@ -1,6 +1,7 @@
 import Foundation
 
-public struct CCalendar {
+/// TODO add documentation
+public struct Calendar {
     public var subComponents: [CalendarComponent] = []
     public var otherAttrs = [String:String]()
 
@@ -11,7 +12,7 @@ public struct CCalendar {
     }
 } // End struct
 
-extension CCalendar: IcsElement {
+extension Calendar: IcsElement {
 
     public mutating func append(component: CalendarComponent?) {
         guard let component = component else {
@@ -29,7 +30,7 @@ extension CCalendar: IcsElement {
 
 } // End extension
 
-extension CCalendar: CalendarComponent {
+extension Calendar: CalendarComponent {
     public func toCal() -> String {
         var str = "BEGIN:VCALENDAR\n"
 

@@ -12,4 +12,9 @@ extension String {
             return (String(arr[0]), String(arr[1]))
         }
     }
+
+    /// Convert String to Date
+    func toDate() -> Date? {
+        return iCalManager.dateFormatter.date(from: self)
+    }
 } // End extension

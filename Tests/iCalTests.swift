@@ -17,7 +17,7 @@ class iCalTests: XCTestCase {
         ("testQuickstartFromUrl", testQuickstartFromUrl),
     ]
 
-    var exampleCals: [CCalendar] = []
+    var exampleCals: [iCal.Calendar] = []
 
     override func setUp() {
         let bundle = Bundle(for: type(of: self))
@@ -27,7 +27,7 @@ class iCalTests: XCTestCase {
         }
         
         do {
-            self.exampleCals = try iCal.load(url: url)
+            self.exampleCals = try iCalManager.load(url: url)
         } catch {
             print(error.localizedDescription)
         }
@@ -46,18 +46,18 @@ class iCalTests: XCTestCase {
 
         var firstEvent: Event = Event()
         firstEvent.uid = "uid1@example.com"
-        firstEvent.dtstamp = iCal.date(from: "19970714T170000Z")
+        firstEvent.dtstamp = "19970714T170000Z".toDate()
         firstEvent.summary = "Bastille Day Party"
-        firstEvent.dtstart = iCal.date(from: "19970714T170000Z")
-        firstEvent.dtend = iCal.date(from: "19970715T035959Z")
+        firstEvent.dtstart = "19970714T170000Z".toDate()
+        firstEvent.dtend = "19970715T035959Z".toDate()
         // TODO add alarm to `firstEvent`
 
         var secondEvent: Event = Event()
         secondEvent.uid = "uid2@example.com"
-        secondEvent.dtstamp = iCal.date(from: "19980714T170000Z")
+        secondEvent.dtstamp = "19980714T170000Z".toDate()
         secondEvent.summary = "Something completely different"
-        secondEvent.dtstart = iCal.date(from: "19980714T170000Z")
-        secondEvent.dtend = iCal.date(from: "19980715T035959Z")
+        secondEvent.dtstart = "19980714T170000Z".toDate()
+        secondEvent.dtend = "19980715T035959Z".toDate()
         // TODO add organizer to `secondEvent`
 
         XCTAssertEqual(cal.subComponents.count, 2) // Should have 2 events
@@ -68,7 +68,7 @@ class iCalTests: XCTestCase {
     func testQuickstart() {
         var event = Event()
         event.summary = "Awesome event"
-        let calendar = CCalendar(withComponents: [event])
+        let calendar = Calendar(withComponents: [event])
         let iCalString = calendar.toCal()
 
         XCTAssertEqual(iCalString.contains("SUMMARY:Awesome event"), true)
@@ -76,7 +76,7 @@ class iCalTests: XCTestCase {
 
     func testQuickstartFromUrl() {
         let url = URL(string: "https://raw.githubusercontent.com/kiliankoe/iCal/master/example.ics")!
-        let cals = try! iCal.load(url: url)
+        let cals = try! iCalManager.load(url: url)
         // or loadFile() or loadString(), all of which return [Calendar] as an ics file can contain multiple calendars
 
         for cal in cals {

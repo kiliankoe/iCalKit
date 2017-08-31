@@ -1,11 +1,11 @@
 import Foundation
 
-public enum iCal {
+public enum iCalManager {
     /// Loads the content of a given string.
     ///
     /// - Parameter string: string to load
     /// - Returns: List of containted `Calendar`s
-    public static func load(string: String) -> [CCalendar] {
+    public static func load(string: String) -> [Calendar] {
         let icsContent = string.components(separatedBy: "\n")
         return parse(icsContent)
     }
@@ -18,13 +18,13 @@ public enum iCal {
     /// - Returns: List of contained `Calendar`s.
     /// - Throws: Error encountered during loading of URL or decoding of data.
     /// - Warning: This is a **synchronous** operation! Use `load(string:)` and fetch your data beforehand for async handling.
-    public static func load(url: URL, encoding: String.Encoding = .utf8) throws -> [CCalendar] {
+    public static func load(url: URL, encoding: String.Encoding = .utf8) throws -> [Calendar] {
         let data = try Data(contentsOf: url)
         guard let string = String(data: data, encoding: encoding) else { throw iCalError.encoding }
         return load(string: string)
     }
 
-    private static func parse(_ icsContent: [String]) -> [CCalendar] {
+    private static func parse(_ icsContent: [String]) -> [Calendar] {
         let parser = Parser(icsContent)
         do {
             return try parser.read()
@@ -32,16 +32,6 @@ public enum iCal {
             print(error)
             return []
         }
-    }
-
-    // MARK: - Convenience and Util functions
-    // TODO convert these to extension
-    public static func date(from string: String) -> Date? {
-        return iCal.dateFormatter.date(from: string)
-    }
-
-    public static func string(from date: Date) -> String {
-        return iCal.dateFormatter.string(from: date)
     }
 
     static let dateFormatter: DateFormatter = {

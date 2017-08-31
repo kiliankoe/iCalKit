@@ -26,4 +26,4 @@ extension Alarm: CalendarComponent {
         str += "END:VALARM"
         return str
     }
-} // End extensuon
+} // End extension
