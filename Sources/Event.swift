@@ -28,23 +28,24 @@ extension Event: CalendarComponent {
     public func toCal() -> String {
         var str: String = "BEGIN:VEVENT\n"
 
-        guard let uid = uid,
-              let dtstamp = dtstamp,
-              let summary = summary,
-              let descr = descr,
-              let dtstart = dtstart,
-              let dtend = dtend
-            else {
-            str += "END:VEVENT"
-            return str
+        if let uid = uid {
+            str += "UID:\(uid)\n"
         }
-        
-        str += "UID:\(uid)\n"
-        str += "DTSTAMP:\(iCal.string(from: dtstamp))\n"
-        str += "SUMMARY:\(summary)\n"
-        str += "DESCRIPTION:\(descr)\n"
-        str += "DTSTART:\(iCal.string(from: dtstart))\n"
-        str += "DTEND:\(iCal.string(from: dtend))\n"
+        if let dtstamp = dtstamp {
+            str += "DTSTAMP:\(iCal.string(from: dtstamp))\n"
+        }
+        if let summary = summary {
+            str += "SUMMARY:\(summary)\n"
+        }
+        if let descr = descr {
+            str += "DESCRIPTION:\(descr)\n"
+        }
+        if let dtstart = dtstart {
+            str += "DTSTART:\(iCal.string(from: dtstart))\n"
+        }
+        if let dtend = dtend {
+            str += "DTEND:\(iCal.string(from: dtend))\n"
+        }
 
         for (key, val) in otherAttrs {
             str += "\(key):\(val)\n"
