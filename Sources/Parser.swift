@@ -51,7 +51,10 @@ internal class Parser {
                 break
             } // End switch
 
-            let (key, value) = line.toKeyValuePair(splittingOn: ":")
+            guard let (key, value) = line.toKeyValuePair(splittingOn: ":") else {
+                print("(key, value) is nil")
+                continue
+            }
 
             if inCalendar && !inEvent {
                 currentCalendar?.addAttribute(attr: key, value)
