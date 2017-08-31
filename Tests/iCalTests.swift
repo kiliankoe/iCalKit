@@ -13,7 +13,6 @@ class iCalTests: XCTestCase {
     static var allTests = [
         ("testLoadLocalFile", testLoadLocalFile),
         ("testEventData", testEventData),
-        ("testiCalString", testiCalString),
         ("testQuickstart", testQuickstart),
         ("testQuickstartFromUrl", testQuickstartFromUrl),
     ]
@@ -39,17 +38,31 @@ class iCalTests: XCTestCase {
     }
 
     func testEventData() {
-        let cal = exampleCals.first!
-        for event in cal.subComponents where event is Event {
-            XCTAssertEqual(event.toCal(), "") // TODO
+        guard let cal = exampleCals.first
+            else {
+                XCTAssert(false, "No calendar found")
+                return
         }
-    }
 
-    func testiCalString() {
-        var event = Event()
-        event.summary = "Awesome Event"
-        let cal = CCalendar(withComponents: [event])
-        XCTAssertEqual(cal.toCal(), "") // TODO
+        var firstEvent: Event = Event()
+        firstEvent.uid = "uid1@example.com"
+        firstEvent.dtstamp = iCal.date(from: "19970714T170000Z")
+        firstEvent.summary = "Bastille Day Party"
+        firstEvent.dtstart = iCal.date(from: "19970714T170000Z")
+        firstEvent.dtend = iCal.date(from: "19970715T035959Z")
+        // TODO add alarm to `firstEvent`
+
+        var secondEvent: Event = Event()
+        secondEvent.uid = "uid2@example.com"
+        secondEvent.dtstamp = iCal.date(from: "19980714T170000Z")
+        secondEvent.summary = "Something completely different"
+        secondEvent.dtstart = iCal.date(from: "19980714T170000Z")
+        secondEvent.dtend = iCal.date(from: "19980715T035959Z")
+        // TODO add organizer to `secondEvent`
+
+        XCTAssertEqual(cal.subComponents.count, 2) // Should have 2 events
+        XCTAssertEqual(cal.subComponents[0] as! Event, firstEvent)
+        XCTAssertEqual(cal.subComponents[1] as! Event, secondEvent)
     }
 
     func testQuickstart() {
