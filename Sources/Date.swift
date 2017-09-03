@@ -5,4 +5,4 @@ extension Date {
     func toString() -> String {
         return iCalManager.dateFormatter.string(from: self)
     }
-} // End extension
+}

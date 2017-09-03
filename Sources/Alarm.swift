@@ -4,7 +4,7 @@ import Foundation
 public struct Alarm {
     public var subComponents: [CalendarComponent] = []
     public var otherAttrs = [String:String]()
-} // End struct
+}
 
 extension Alarm: IcsElement {
     public mutating func addAttribute(attr: String, _ value: String) {
@@ -13,7 +13,7 @@ extension Alarm: IcsElement {
                 otherAttrs[attr] = value
         }
     }
-} // End extension
+}
 
 extension Alarm: CalendarComponent {
     public func toCal() -> String {
@@ -26,4 +26,4 @@ extension Alarm: CalendarComponent {
         str += "END:VALARM"
         return str
     }
-} // End extension
+}

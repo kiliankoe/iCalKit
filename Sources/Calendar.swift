@@ -10,7 +10,7 @@ public struct Calendar {
             self.subComponents = components
         }
     }
-} // End struct
+}
 
 extension Calendar: IcsElement {
 
@@ -28,7 +28,7 @@ extension Calendar: IcsElement {
         }
     }
 
-} // End extension
+}
 
 extension Calendar: CalendarComponent {
     public func toCal() -> String {
@@ -45,4 +45,4 @@ extension Calendar: CalendarComponent {
         str += "END:VCALENDAR"
         return str
     }
-} // End extension
+}

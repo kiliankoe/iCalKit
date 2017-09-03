@@ -5,4 +5,4 @@ public enum iCalError: Error {
     case encoding
     case parseError
     case unsupportedICalVersion
-} // End enum
+}

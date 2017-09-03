@@ -50,7 +50,7 @@ internal class Parser {
                 continue
             default:
                 break
-            } // End switch
+            }
 
             guard let (key, value) = line.toKeyValuePair(splittingOn: ":") else {
                 // print("(key, value) is nil") // DEBUG
@@ -72,4 +72,4 @@ internal class Parser {
 
         return completeCal.flatMap{ $0 }
     }
-} // End class
+}

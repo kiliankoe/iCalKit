@@ -22,7 +22,7 @@ public struct Event {
         self.uid = uid
         self.dtstamp = dtstamp
     }
-} // End struct
+}
 
 extension Event: CalendarComponent {
     public func toCal() -> String {
@@ -58,7 +58,7 @@ extension Event: CalendarComponent {
         str += "END:VEVENT"
         return str
     }
-} // End extension
+}
 
 extension Event: IcsElement {
     public mutating func addAttribute(attr: String, _ value: String) {
@@ -81,7 +81,7 @@ extension Event: IcsElement {
             otherAttrs[attr] = value
         }
     }
-} // End extension
+}
 
 extension Event: Equatable { }
 
@@ -93,4 +93,4 @@ extension Event: CustomStringConvertible {
     public var description: String {
         return "\(dtstamp.toString()): \(summary ?? "")"
     }
-} // End extension
+}

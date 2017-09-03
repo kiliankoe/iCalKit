@@ -9,7 +9,7 @@ public protocol IcsElement {
     mutating func addAttribute(attr: String, _ value: String)
     /// TODO add documentation
     mutating func append(component: CalendarComponent?)
-} // End protocol
+}
 
 extension IcsElement {
     public mutating func append(component: CalendarComponent?) {
@@ -17,4 +17,4 @@ extension IcsElement {
             subComponents.append(component)
         }
     }
-} // End extension
+}

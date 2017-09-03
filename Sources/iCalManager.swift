@@ -39,4 +39,4 @@ public enum iCalManager {
         dateFormatter.dateFormat = "yyyyMMdd'T'HHmmss'Z'"
         return dateFormatter
     }()
-} // End enum
+}

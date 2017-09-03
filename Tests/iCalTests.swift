@@ -88,5 +88,4 @@ class iCalTests: XCTestCase {
         XCTAssertEqual("\(cals[0].subComponents[0])", "19970714T170000Z: Bastille Day Party")
         XCTAssertEqual("\(cals[0].subComponents[1])", "19980714T170000Z: Something completely different")
     }
-} // End class
-
+}

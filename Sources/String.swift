@@ -17,4 +17,4 @@ extension String {
     func toDate() -> Date? {
         return iCalManager.dateFormatter.date(from: self)
     }
-} // End extension
+}
