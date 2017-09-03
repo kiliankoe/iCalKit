@@ -1,6 +1,6 @@
 import Foundation
 
-public enum iCal {
+public enum iCalManager {
     /// Loads the content of a given string.
     ///
     /// - Parameter string: string to load
@@ -32,16 +32,6 @@ public enum iCal {
             print(error)
             return []
         }
-    }
-
-    // Convenience and Util functions
-
-    public static func date(from string: String) -> Date? {
-        return iCal.dateFormatter.date(from: string)
-    }
-
-    public static func string(from date: Date) -> String {
-        return iCal.dateFormatter.string(from: date)
     }
 
     static let dateFormatter: DateFormatter = {

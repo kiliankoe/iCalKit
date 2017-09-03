@@ -35,23 +35,27 @@
 		39747B311E9BCF9C00CF14B9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B121E9BCF9C00CF14B9 /* Parser.swift */; };
 		39747B321E9BCF9C00CF14B9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B121E9BCF9C00CF14B9 /* Parser.swift */; };
 		39747B331E9BCF9C00CF14B9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B121E9BCF9C00CF14B9 /* Parser.swift */; };
-		39747B341E9BCF9C00CF14B9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* Util.swift */; };
-		39747B351E9BCF9C00CF14B9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* Util.swift */; };
-		39747B361E9BCF9C00CF14B9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* Util.swift */; };
-		39747B371E9BCF9C00CF14B9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* Util.swift */; };
-		39747B3A1E9C176200CF14B9 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 39747B391E9C176200CF14B9 /* example.ics */; };
-		39747B3B1E9C176200CF14B9 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 39747B391E9C176200CF14B9 /* example.ics */; };
-		39747B3C1E9C176200CF14B9 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 39747B391E9C176200CF14B9 /* example.ics */; };
+		39747B341E9BCF9C00CF14B9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* String.swift */; };
+		39747B351E9BCF9C00CF14B9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* String.swift */; };
+		39747B361E9BCF9C00CF14B9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* String.swift */; };
+		39747B371E9BCF9C00CF14B9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39747B131E9BCF9C00CF14B9 /* String.swift */; };
+		416460891F58026A002CBDDE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416460881F58026A002CBDDE /* Date.swift */; };
+		4164608A1F58026A002CBDDE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416460881F58026A002CBDDE /* Date.swift */; };
+		4164608B1F58026A002CBDDE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416460881F58026A002CBDDE /* Date.swift */; };
+		4164608C1F58026A002CBDDE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416460881F58026A002CBDDE /* Date.swift */; };
+		41B9145A1F573F7F00340D30 /* iCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B914591F573F7F00340D30 /* iCalTests.swift */; };
+		41B9145B1F573F7F00340D30 /* iCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B914591F573F7F00340D30 /* iCalTests.swift */; };
+		41B9145C1F573F7F00340D30 /* iCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B914591F573F7F00340D30 /* iCalTests.swift */; };
+		41B9145D1F573F9700340D30 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 41B914571F573F4400340D30 /* example.ics */; };
+		41B9145E1F573F9800340D30 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 41B914571F573F4400340D30 /* example.ics */; };
+		41B9145F1F573F9800340D30 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 41B914571F573F4400340D30 /* example.ics */; };
 		52D6D9871BEFF229002C0205 /* iCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* iCal.framework */; };
-		52D6D9981BEFF375002C0205 /* iCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9961BEFF375002C0205 /* iCal.swift */; };
-		52D6D99B1BEFF375002C0205 /* iCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9971BEFF375002C0205 /* iCalTests.swift */; };
-		52D6D9EA1BEFFFA4002C0205 /* iCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9961BEFF375002C0205 /* iCal.swift */; };
-		52D6DA091BF00081002C0205 /* iCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9961BEFF375002C0205 /* iCal.swift */; };
-		52D6DA261BF00118002C0205 /* iCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9961BEFF375002C0205 /* iCal.swift */; };
-		DD7502861C68FDDC006590AF /* iCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9971BEFF375002C0205 /* iCalTests.swift */; };
+		52D6D9981BEFF375002C0205 /* iCalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9961BEFF375002C0205 /* iCalManager.swift */; };
+		52D6D9EA1BEFFFA4002C0205 /* iCalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9961BEFF375002C0205 /* iCalManager.swift */; };
+		52D6DA091BF00081002C0205 /* iCalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9961BEFF375002C0205 /* iCalManager.swift */; };
+		52D6DA261BF00118002C0205 /* iCalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9961BEFF375002C0205 /* iCalManager.swift */; };
 		DD7502881C68FEDE006590AF /* iCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* iCal.framework */; };
 		DD7502921C690C7A006590AF /* iCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* iCal.framework */; };
-		DD75029A1C690CBE006590AF /* iCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9971BEFF375002C0205 /* iCalTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,12 +90,13 @@
 		39747B0F1E9BCF9C00CF14B9 /* iCalError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCalError.swift; path = Sources/iCalError.swift; sourceTree = "<group>"; };
 		39747B101E9BCF9C00CF14B9 /* IcsElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IcsElement.swift; path = Sources/IcsElement.swift; sourceTree = "<group>"; };
 		39747B121E9BCF9C00CF14B9 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser.swift; sourceTree = "<group>"; };
-		39747B131E9BCF9C00CF14B9 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Util.swift; path = Sources/Util.swift; sourceTree = "<group>"; };
-		39747B391E9C176200CF14B9 /* example.ics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.ics; sourceTree = "<group>"; };
+		39747B131E9BCF9C00CF14B9 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Sources/String.swift; sourceTree = "<group>"; };
+		416460881F58026A002CBDDE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Sources/Date.swift; sourceTree = "<group>"; };
+		41B914571F573F4400340D30 /* example.ics */ = {isa = PBXFileReference; lastKnownFileType = text; name = example.ics; path = Tests/example.ics; sourceTree = "<group>"; };
+		41B914591F573F7F00340D30 /* iCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iCalTests.swift; path = Tests/iCalTests.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* iCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* iCal-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iCal-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		52D6D9961BEFF375002C0205 /* iCal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCal.swift; path = Sources/iCal.swift; sourceTree = "<group>"; };
-		52D6D9971BEFF375002C0205 /* iCalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCalTests.swift; path = Tests/iCalTests/iCalTests.swift; sourceTree = "<group>"; };
+		52D6D9961BEFF375002C0205 /* iCalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCalManager.swift; path = Sources/iCalManager.swift; sourceTree = "<group>"; };
 		52D6D9E21BEFFF6E002C0205 /* iCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9F01BEFFFBE002C0205 /* iCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* iCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,24 +165,57 @@
 		39747B381E9BCFA600CF14B9 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				52D6D9971BEFF375002C0205 /* iCalTests.swift */,
-				39747B391E9C176200CF14B9 /* example.ics */,
+				41B914591F573F7F00340D30 /* iCalTests.swift */,
+				41B914571F573F4400340D30 /* example.ics */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		4126E2841F572773006DE917 /* iCal */ = {
+			isa = PBXGroup;
+			children = (
+				52D6D9961BEFF375002C0205 /* iCalManager.swift */,
+				39747B0B1E9BCF9C00CF14B9 /* Alarm.swift */,
+				39747B0C1E9BCF9C00CF14B9 /* Calendar.swift */,
+				39747B0E1E9BCF9C00CF14B9 /* Event.swift */,
+				39747B121E9BCF9C00CF14B9 /* Parser.swift */,
+				4126E2851F572780006DE917 /* Protocols */,
+				4126E2861F572798006DE917 /* Extensions */,
+				4126E2871F5727BD006DE917 /* Enums */,
+			);
+			name = iCal;
+			sourceTree = "<group>";
+		};
+		4126E2851F572780006DE917 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				39747B101E9BCF9C00CF14B9 /* IcsElement.swift */,
+				39747B0D1E9BCF9C00CF14B9 /* CalendarComponent.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		4126E2861F572798006DE917 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				39747B131E9BCF9C00CF14B9 /* String.swift */,
+				416460881F58026A002CBDDE /* Date.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		4126E2871F5727BD006DE917 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				39747B0F1E9BCF9C00CF14B9 /* iCalError.swift */,
+			);
+			name = Enums;
 			sourceTree = "<group>";
 		};
 		52D6D9721BEFF229002C0205 = {
 			isa = PBXGroup;
 			children = (
-				52D6D9961BEFF375002C0205 /* iCal.swift */,
-				39747B0B1E9BCF9C00CF14B9 /* Alarm.swift */,
-				39747B0C1E9BCF9C00CF14B9 /* Calendar.swift */,
-				39747B0D1E9BCF9C00CF14B9 /* CalendarComponent.swift */,
-				39747B0E1E9BCF9C00CF14B9 /* Event.swift */,
-				39747B0F1E9BCF9C00CF14B9 /* iCalError.swift */,
-				39747B101E9BCF9C00CF14B9 /* IcsElement.swift */,
-				39747B121E9BCF9C00CF14B9 /* Parser.swift */,
-				39747B131E9BCF9C00CF14B9 /* Util.swift */,
+				4126E2841F572773006DE917 /* iCal */,
 				39747B381E9BCFA600CF14B9 /* Tests */,
 				52D6D99C1BEFF38C002C0205 /* Configs */,
 				52D6D97D1BEFF229002C0205 /* Products */,
@@ -390,16 +428,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = iCal;
 				TargetAttributes = {
 					52D6D97B1BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					52D6D9851BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					52D6D9E11BEFFF6E002C0205 = {
 						CreatedOnToolsVersion = 7.1;
@@ -458,7 +496,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39747B3A1E9C176200CF14B9 /* example.ics in Resources */,
+				41B9145D1F573F9700340D30 /* example.ics in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +525,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39747B3B1E9C176200CF14B9 /* example.ics in Resources */,
+				41B9145E1F573F9800340D30 /* example.ics in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,7 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39747B3C1E9C176200CF14B9 /* example.ics in Resources */,
+				41B9145F1F573F9800340D30 /* example.ics in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,13 +544,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D6D9981BEFF375002C0205 /* iCal.swift in Sources */,
+				52D6D9981BEFF375002C0205 /* iCalManager.swift in Sources */,
 				39747B181E9BCF9C00CF14B9 /* Calendar.swift in Sources */,
 				39747B141E9BCF9C00CF14B9 /* Alarm.swift in Sources */,
 				39747B281E9BCF9C00CF14B9 /* IcsElement.swift in Sources */,
 				39747B301E9BCF9C00CF14B9 /* Parser.swift in Sources */,
 				39747B1C1E9BCF9C00CF14B9 /* CalendarComponent.swift in Sources */,
-				39747B341E9BCF9C00CF14B9 /* Util.swift in Sources */,
+				39747B341E9BCF9C00CF14B9 /* String.swift in Sources */,
+				4164608C1F58026A002CBDDE /* Date.swift in Sources */,
 				39747B201E9BCF9C00CF14B9 /* Event.swift in Sources */,
 				39747B241E9BCF9C00CF14B9 /* iCalError.swift in Sources */,
 			);
@@ -522,7 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D6D99B1BEFF375002C0205 /* iCalTests.swift in Sources */,
+				41B9145B1F573F7F00340D30 /* iCalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,13 +569,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D6D9EA1BEFFFA4002C0205 /* iCal.swift in Sources */,
+				52D6D9EA1BEFFFA4002C0205 /* iCalManager.swift in Sources */,
 				39747B1A1E9BCF9C00CF14B9 /* Calendar.swift in Sources */,
 				39747B161E9BCF9C00CF14B9 /* Alarm.swift in Sources */,
 				39747B2A1E9BCF9C00CF14B9 /* IcsElement.swift in Sources */,
 				39747B321E9BCF9C00CF14B9 /* Parser.swift in Sources */,
 				39747B1E1E9BCF9C00CF14B9 /* CalendarComponent.swift in Sources */,
-				39747B361E9BCF9C00CF14B9 /* Util.swift in Sources */,
+				39747B361E9BCF9C00CF14B9 /* String.swift in Sources */,
+				4164608A1F58026A002CBDDE /* Date.swift in Sources */,
 				39747B221E9BCF9C00CF14B9 /* Event.swift in Sources */,
 				39747B261E9BCF9C00CF14B9 /* iCalError.swift in Sources */,
 			);
@@ -546,13 +586,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D6DA091BF00081002C0205 /* iCal.swift in Sources */,
+				52D6DA091BF00081002C0205 /* iCalManager.swift in Sources */,
 				39747B1B1E9BCF9C00CF14B9 /* Calendar.swift in Sources */,
 				39747B171E9BCF9C00CF14B9 /* Alarm.swift in Sources */,
 				39747B2B1E9BCF9C00CF14B9 /* IcsElement.swift in Sources */,
 				39747B331E9BCF9C00CF14B9 /* Parser.swift in Sources */,
 				39747B1F1E9BCF9C00CF14B9 /* CalendarComponent.swift in Sources */,
-				39747B371E9BCF9C00CF14B9 /* Util.swift in Sources */,
+				39747B371E9BCF9C00CF14B9 /* String.swift in Sources */,
+				4164608B1F58026A002CBDDE /* Date.swift in Sources */,
 				39747B231E9BCF9C00CF14B9 /* Event.swift in Sources */,
 				39747B271E9BCF9C00CF14B9 /* iCalError.swift in Sources */,
 			);
@@ -562,13 +603,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52D6DA261BF00118002C0205 /* iCal.swift in Sources */,
+				52D6DA261BF00118002C0205 /* iCalManager.swift in Sources */,
 				39747B191E9BCF9C00CF14B9 /* Calendar.swift in Sources */,
 				39747B151E9BCF9C00CF14B9 /* Alarm.swift in Sources */,
 				39747B291E9BCF9C00CF14B9 /* IcsElement.swift in Sources */,
 				39747B311E9BCF9C00CF14B9 /* Parser.swift in Sources */,
 				39747B1D1E9BCF9C00CF14B9 /* CalendarComponent.swift in Sources */,
-				39747B351E9BCF9C00CF14B9 /* Util.swift in Sources */,
+				39747B351E9BCF9C00CF14B9 /* String.swift in Sources */,
+				416460891F58026A002CBDDE /* Date.swift in Sources */,
 				39747B211E9BCF9C00CF14B9 /* Event.swift in Sources */,
 				39747B251E9BCF9C00CF14B9 /* iCalError.swift in Sources */,
 			);
@@ -578,7 +620,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7502861C68FDDC006590AF /* iCalTests.swift in Sources */,
+				41B9145C1F573F7F00340D30 /* iCalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,7 +628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD75029A1C690CBE006590AF /* iCalTests.swift in Sources */,
+				41B9145A1F573F7F00340D30 /* iCalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,14 +661,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -670,14 +718,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -725,7 +779,8 @@
 				PRODUCT_NAME = iCal;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -747,7 +802,8 @@
 				PRODUCT_NAME = iCal;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -760,7 +816,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iCal.iCal-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -773,7 +830,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iCal.iCal-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

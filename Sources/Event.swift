@@ -1,7 +1,8 @@
 import Foundation
 
+/// TODO add documentation
 public struct Event {
-    public var subComponents = [IcsElement]()
+    public var subComponents: [CalendarComponent] = []
     public var otherAttrs = [String:String]()
 
     // required
@@ -23,53 +24,27 @@ public struct Event {
     }
 }
 
-extension Event: IcsElement {
-    public mutating func addAttribute(attr: String, _ value: String) {
-        switch attr {
-        case "UID":
-            uid = value
-        case "DTSTAMP":
-            dtstamp = iCal.date(from: value)
-        case "DTSTART":
-            dtstart = iCal.date(from: value)
-        case "DTEND":
-            dtend = iCal.date(from: value)
-        // case "ORGANIZER":
-        //     organizer
-        case "SUMMARY":
-            summary = value
-        case "DESCRIPTION":
-            descr = value
-        default:
-            otherAttrs[attr] = value
-        }
-    }
-
+extension Event: CalendarComponent {
     public func toCal() -> String {
-        var str = "BEGIN:VEVENT\n"
+        var str: String = "BEGIN:VEVENT\n"
 
         if let uid = uid {
             str += "UID:\(uid)\n"
         }
-
         if let dtstamp = dtstamp {
-            str += "DTSTAMP:\(iCal.string(from: dtstamp))\n"
+            str += "DTSTAMP:\(dtstamp.toString())\n"
         }
-
         if let summary = summary {
             str += "SUMMARY:\(summary)\n"
         }
-
         if let descr = descr {
             str += "DESCRIPTION:\(descr)\n"
         }
-
         if let dtstart = dtstart {
-            str += "DTSTART:\(iCal.string(from: dtstart))\n"
+            str += "DTSTART:\(dtstart.toString())\n"
         }
-
         if let dtend = dtend {
-            str += "DTEND:\(iCal.string(from: dtend))\n"
+            str += "DTEND:\(dtend.toString())\n"
         }
 
         for (key, val) in otherAttrs {
@@ -85,7 +60,30 @@ extension Event: IcsElement {
     }
 }
 
-extension Event: Equatable {}
+extension Event: IcsElement {
+    public mutating func addAttribute(attr: String, _ value: String) {
+        switch attr {
+        case "UID":
+            uid = value
+        case "DTSTAMP":
+            dtstamp = value.toDate()
+        case "DTSTART":
+            dtstart = value.toDate()
+        case "DTEND":
+            dtend = value.toDate()
+        // case "ORGANIZER":
+        //     organizer
+        case "SUMMARY":
+            summary = value
+        case "DESCRIPTION":
+            descr = value
+        default:
+            otherAttrs[attr] = value
+        }
+    }
+}
+
+extension Event: Equatable { }
 
 public func ==(lhs: Event, rhs: Event) -> Bool {
     return lhs.uid == rhs.uid
@@ -93,6 +91,6 @@ public func ==(lhs: Event, rhs: Event) -> Bool {
 
 extension Event: CustomStringConvertible {
     public var description: String {
-        return "\(iCal.stringFromDate(dtstamp)): \(summary ?? "")"
+        return "\(dtstamp.toString()): \(summary ?? "")"
     }
 }

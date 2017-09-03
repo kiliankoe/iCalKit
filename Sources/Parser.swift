@@ -1,5 +1,6 @@
 import Foundation
 
+/// TODO add documentation
 internal class Parser {
     let icsContent: [String]
 
@@ -8,26 +9,21 @@ internal class Parser {
     }
 
     func read() throws -> [Calendar] {
-
         var completeCal = [Calendar?]()
 
         // Such state, much wow
-
         var inCalendar = false
-        var currentCalendar: Calendar? = nil
-
+        var currentCalendar: Calendar?
         var inEvent = false
-        var currentEvent: Event? = nil
-
+        var currentEvent: Event?
         var inAlarm = false
-        var currentAlarm: Alarm? = nil
+        var currentAlarm: Alarm?
+
         for (_ , line) in icsContent.enumerated() {
-
-
             switch line {
             case "BEGIN:VCALENDAR":
                 inCalendar = true
-                currentCalendar = Calendar()
+                currentCalendar = Calendar(withComponents: nil)
                 continue
             case "END:VCALENDAR":
                 inCalendar = false
@@ -40,7 +36,7 @@ internal class Parser {
                 continue
             case "END:VEVENT":
                 inEvent = false
-                currentCalendar?.append(currentEvent)
+                currentCalendar?.append(component: currentEvent)
                 currentEvent = nil
                 continue
             case "BEGIN:VALARM":
@@ -49,25 +45,28 @@ internal class Parser {
                 continue
             case "END:VALARM":
                 inAlarm = false
-                currentEvent?.append(currentAlarm)
+                currentEvent?.append(component: currentAlarm)
                 currentAlarm = nil
                 continue
             default:
                 break
             }
 
-            let (key, value) = line.toKeyValuePair(splittingOn: ":")
+            guard let (key, value) = line.toKeyValuePair(splittingOn: ":") else {
+                // print("(key, value) is nil") // DEBUG
+                continue
+            }
 
             if inCalendar && !inEvent {
-                currentCalendar?.addAttribute(key, value)
+                currentCalendar?.addAttribute(attr: key, value)
             }
 
             if inEvent && !inAlarm {
-                currentEvent?.addAttribute(key, value)
+                currentEvent?.addAttribute(attr: key, value)
             }
 
             if inAlarm {
-                currentAlarm?.addAttribute(key, value)
+                currentAlarm?.addAttribute(attr: key, value)
             }
         }
 
