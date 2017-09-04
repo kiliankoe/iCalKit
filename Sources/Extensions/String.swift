@@ -15,6 +15,6 @@ extension String {
 
     /// Convert String to Date
     func toDate() -> Date? {
-        return iCalManager.dateFormatter.date(from: self)
+        return iCal.dateFormatter.date(from: self)
     }
 }

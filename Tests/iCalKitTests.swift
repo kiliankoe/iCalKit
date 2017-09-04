@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import iCal
+@testable import iCalKit
 
 class iCalTests: XCTestCase {
     static var allTests = [
@@ -17,7 +17,7 @@ class iCalTests: XCTestCase {
         ("testQuickstartFromUrl", testQuickstartFromUrl),
     ]
 
-    var exampleCals: [iCal.Calendar] = []
+    var exampleCals: [iCalKit.Calendar] = []
 
     override func setUp() {
         let bundle = Bundle(for: type(of: self))
@@ -27,7 +27,7 @@ class iCalTests: XCTestCase {
         }
         
         do {
-            self.exampleCals = try iCalManager.load(url: url)
+            self.exampleCals = try iCal.load(url: url)
         } catch {
             print(error.localizedDescription)
         }
@@ -75,8 +75,8 @@ class iCalTests: XCTestCase {
     }
 
     func testQuickstartFromUrl() {
-        let url = URL(string: "https://raw.githubusercontent.com/kiliankoe/iCal/master/Tests/example.ics")!
-        let cals = try! iCalManager.load(url: url)
+        let url = URL(string: "https://raw.githubusercontent.com/kiliankoe/iCalKit/master/Tests/example.ics")!
+        let cals = try! iCal.load(url: url)
         // or loadFile() or loadString(), all of which return [Calendar] as an ics file can contain multiple calendars
 
         for cal in cals {

@@ -1,4 +1,4 @@
-## 📅 iCal
+## 📅 iCalKit
 
 ### Very WIP. Please don't use this yet. It'll be a bit before this actually becomes presentable.
 
@@ -44,8 +44,8 @@ print(iCalString)
 ```
 
 ```swift
-let url = URL(string: "https://raw.githubusercontent.com/kiliankoe/iCal/master/Tests/example.ics")!
-let cals = try! iCalManager.loadURL(url)
+let url = URL(string: "https://raw.githubusercontent.com/kiliankoe/iCalKit/master/Tests/example.ics")!
+let cals = try! iCal.loadURL(url)
 // or loadFile() or loadString(), all of which return [Calendar] as an ics file can contain multiple calendars
 
 for cal in cals {

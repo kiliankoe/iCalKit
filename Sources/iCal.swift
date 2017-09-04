@@ -1,6 +1,6 @@
 import Foundation
 
-public enum iCalManager {
+public enum iCal {
     /// Loads the content of a given string.
     ///
     /// - Parameter string: string to load

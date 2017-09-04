@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52D6D97B1BEFF229002C0205"
-               BuildableName = "iCal.framework"
-               BlueprintName = "iCal-iOS"
-               ReferencedContainer = "container:iCal.xcodeproj">
+               BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
+               BuildableName = "iCalKit.framework"
+               BlueprintName = "iCalKit-tvOS"
+               ReferencedContainer = "container:iCalKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,20 +34,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52D6D9851BEFF229002C0205"
-               BuildableName = "iCal-iOS Tests.xctest"
-               BlueprintName = "iCal-iOS Tests"
-               ReferencedContainer = "container:iCal.xcodeproj">
+               BlueprintIdentifier = "DD75028C1C690C7A006590AF"
+               BuildableName = "iCalKit-tvOS Tests.xctest"
+               BlueprintName = "iCalKit-tvOS Tests"
+               ReferencedContainer = "container:iCalKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52D6D97B1BEFF229002C0205"
-            BuildableName = "iCal.framework"
-            BlueprintName = "iCal-iOS"
-            ReferencedContainer = "container:iCal.xcodeproj">
+            BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
+            BuildableName = "iCalKit.framework"
+            BlueprintName = "iCalKit-tvOS"
+            ReferencedContainer = "container:iCalKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,10 +67,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52D6D97B1BEFF229002C0205"
-            BuildableName = "iCal.framework"
-            BlueprintName = "iCal-iOS"
-            ReferencedContainer = "container:iCal.xcodeproj">
+            BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
+            BuildableName = "iCalKit.framework"
+            BlueprintName = "iCalKit-tvOS"
+            ReferencedContainer = "container:iCalKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,10 +85,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52D6D97B1BEFF229002C0205"
-            BuildableName = "iCal.framework"
-            BlueprintName = "iCal-iOS"
-            ReferencedContainer = "container:iCal.xcodeproj">
+            BlueprintIdentifier = "52D6D9EF1BEFFFBE002C0205"
+            BuildableName = "iCalKit.framework"
+            BlueprintName = "iCalKit-tvOS"
+            ReferencedContainer = "container:iCalKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

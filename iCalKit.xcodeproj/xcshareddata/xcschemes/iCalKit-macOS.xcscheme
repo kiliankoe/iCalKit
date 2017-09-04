@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52D6D9E11BEFFF6E002C0205"
-               BuildableName = "iCal.framework"
-               BlueprintName = "iCal-watchOS"
-               ReferencedContainer = "container:iCal.xcodeproj">
+               BlueprintIdentifier = "52D6DA0E1BF000BD002C0205"
+               BuildableName = "iCalKit.framework"
+               BlueprintName = "iCalKit-macOS"
+               ReferencedContainer = "container:iCalKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -30,7 +30,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DD7502791C68FCFC006590AF"
+               BuildableName = "iCalKit-macOS Tests.xctest"
+               BlueprintName = "iCalKit-macOS Tests"
+               ReferencedContainer = "container:iCalKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "52D6DA0E1BF000BD002C0205"
+            BuildableName = "iCalKit.framework"
+            BlueprintName = "iCalKit-macOS"
+            ReferencedContainer = "container:iCalKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -48,10 +67,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52D6D9E11BEFFF6E002C0205"
-            BuildableName = "iCal.framework"
-            BlueprintName = "iCal-watchOS"
-            ReferencedContainer = "container:iCal.xcodeproj">
+            BlueprintIdentifier = "52D6DA0E1BF000BD002C0205"
+            BuildableName = "iCalKit.framework"
+            BlueprintName = "iCalKit-macOS"
+            ReferencedContainer = "container:iCalKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,10 +85,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52D6D9E11BEFFF6E002C0205"
-            BuildableName = "iCal.framework"
-            BlueprintName = "iCal-watchOS"
-            ReferencedContainer = "container:iCal.xcodeproj">
+            BlueprintIdentifier = "52D6DA0E1BF000BD002C0205"
+            BuildableName = "iCalKit.framework"
+            BlueprintName = "iCalKit-macOS"
+            ReferencedContainer = "container:iCalKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
