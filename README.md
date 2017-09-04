@@ -44,8 +44,8 @@ print(iCalString)
 ```
 
 ```swift
-let url = NSURL(string: "https://raw.githubusercontent.com/kiliankoe/iCal/master/example.ics")!
-let cals = try! iCal.loadURL(url)
+let url = URL(string: "https://raw.githubusercontent.com/kiliankoe/iCal/master/Tests/example.ics")!
+let cals = try! iCalManager.loadURL(url)
 // or loadFile() or loadString(), all of which return [Calendar] as an ics file can contain multiple calendars
 
 for cal in cals {

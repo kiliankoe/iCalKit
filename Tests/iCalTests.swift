@@ -75,7 +75,7 @@ class iCalTests: XCTestCase {
     }
 
     func testQuickstartFromUrl() {
-        let url = URL(string: "https://raw.githubusercontent.com/kiliankoe/iCal/master/example.ics")!
+        let url = URL(string: "https://raw.githubusercontent.com/kiliankoe/iCal/master/Tests/example.ics")!
         let cals = try! iCalManager.load(url: url)
         // or loadFile() or loadString(), all of which return [Calendar] as an ics file can contain multiple calendars
 
@@ -84,6 +84,8 @@ class iCalTests: XCTestCase {
                 print(event)
             }
         }
+
+        XCTAssertEqual(cals.count, 1)
         XCTAssertEqual(cals[0].subComponents.count, 2) // Should have 2 events
         XCTAssertEqual("\(cals[0].subComponents[0])", "19970714T170000Z: Bastille Day Party")
         XCTAssertEqual("\(cals[0].subComponents[1])", "19980714T170000Z: Something completely different")

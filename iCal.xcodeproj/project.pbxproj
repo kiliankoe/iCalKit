@@ -94,6 +94,7 @@
 		416460881F58026A002CBDDE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Sources/Date.swift; sourceTree = "<group>"; };
 		41B914571F573F4400340D30 /* example.ics */ = {isa = PBXFileReference; lastKnownFileType = text; name = example.ics; path = Tests/example.ics; sourceTree = "<group>"; };
 		41B914591F573F7F00340D30 /* iCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iCalTests.swift; path = Tests/iCalTests.swift; sourceTree = "<group>"; };
+		41CE90031F5D549D00C50155 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* iCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* iCal-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iCal-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9961BEFF375002C0205 /* iCalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCalManager.swift; path = Sources/iCalManager.swift; sourceTree = "<group>"; };
@@ -215,6 +216,7 @@
 		52D6D9721BEFF229002C0205 = {
 			isa = PBXGroup;
 			children = (
+				41CE90031F5D549D00C50155 /* README.md */,
 				4126E2841F572773006DE917 /* iCal */,
 				39747B381E9BCFA600CF14B9 /* Tests */,
 				52D6D99C1BEFF38C002C0205 /* Configs */,
@@ -441,23 +443,23 @@
 					};
 					52D6D9E11BEFFF6E002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					52D6D9EF1BEFFFBE002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					52D6DA0E1BF000BD002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					DD7502791C68FCFC006590AF = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					DD75028C1C690C7A006590AF = {
 						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -851,7 +853,8 @@
 				PRODUCT_NAME = iCal;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -874,7 +877,8 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -896,7 +900,8 @@
 				PRODUCT_NAME = iCal;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -919,7 +924,8 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -944,7 +950,8 @@
 				PRODUCT_NAME = iCal;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -968,7 +975,8 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -983,7 +991,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iCal.iCal-macOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -999,7 +1008,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1011,7 +1021,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iCal.iCal-tvOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Debug;
@@ -1025,7 +1036,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
