@@ -12,6 +12,7 @@ import XCTest
 class iCalTests: XCTestCase {
     static var allTests = [
         ("testLoadLocalFile", testLoadLocalFile),
+        
         ("testEventData", testEventData),
         ("testQuickstart", testQuickstart),
         ("testQuickstartFromUrl", testQuickstartFromUrl),

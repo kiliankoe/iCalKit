@@ -54,6 +54,28 @@
 		41A675901F5D7EB800E8EC55 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 41CE90051F5D572D00C50155 /* example.ics */; };
 		41A675911F5D7EB800E8EC55 /* example.ics in Resources */ = {isa = PBXBuildFile; fileRef = 41CE90051F5D572D00C50155 /* example.ics */; };
 		52D6D9871BEFF229002C0205 /* iCalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* iCalKit.framework */; };
+		AC324030202238FE003965D7 /* EscapedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32402F202238FE003965D7 /* EscapedTests.swift */; };
+		AC5E1B1F20225C7D00278318 /* escapedExample.ics in Resources */ = {isa = PBXBuildFile; fileRef = AC5E1B1D20225C5B00278318 /* escapedExample.ics */; };
+		AC5E1B2120225C8000278318 /* escapedExample.ics in Resources */ = {isa = PBXBuildFile; fileRef = AC5E1B1D20225C5B00278318 /* escapedExample.ics */; };
+		AC5E1B2220225C8100278318 /* escapedExample.ics in Resources */ = {isa = PBXBuildFile; fileRef = AC5E1B1D20225C5B00278318 /* escapedExample.ics */; };
+		AC5E1B292022645E00278318 /* EscapedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32402F202238FE003965D7 /* EscapedTests.swift */; };
+		AC5E1B2A2022645F00278318 /* EscapedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32402F202238FE003965D7 /* EscapedTests.swift */; };
+		ACAA8FC320223110002C0A88 /* EscapeStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FC220223110002C0A88 /* EscapeStringConstants.swift */; };
+		ACAA8FC420223110002C0A88 /* EscapeStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FC220223110002C0A88 /* EscapeStringConstants.swift */; };
+		ACAA8FC520223110002C0A88 /* EscapeStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FC220223110002C0A88 /* EscapeStringConstants.swift */; };
+		ACAA8FC620223111002C0A88 /* EscapeStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FC220223110002C0A88 /* EscapeStringConstants.swift */; };
+		ACAA8FC8202233FE002C0A88 /* ICALEscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FC7202233FE002C0A88 /* ICALEscape.swift */; };
+		ACAA8FC9202233FE002C0A88 /* ICALEscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FC7202233FE002C0A88 /* ICALEscape.swift */; };
+		ACAA8FCA202233FE002C0A88 /* ICALEscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FC7202233FE002C0A88 /* ICALEscape.swift */; };
+		ACAA8FCB202233FE002C0A88 /* ICALEscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FC7202233FE002C0A88 /* ICALEscape.swift */; };
+		ACAA8FCD2022348C002C0A88 /* RFS5545Escape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FCC2022348C002C0A88 /* RFS5545Escape.swift */; };
+		ACAA8FCE2022348C002C0A88 /* RFS5545Escape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FCC2022348C002C0A88 /* RFS5545Escape.swift */; };
+		ACAA8FCF2022348C002C0A88 /* RFS5545Escape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FCC2022348C002C0A88 /* RFS5545Escape.swift */; };
+		ACAA8FD02022348C002C0A88 /* RFS5545Escape.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FCC2022348C002C0A88 /* RFS5545Escape.swift */; };
+		ACAA8FD2202234C9002C0A88 /* ReplaceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FD1202234C8002C0A88 /* ReplaceString.swift */; };
+		ACAA8FD3202234C9002C0A88 /* ReplaceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FD1202234C8002C0A88 /* ReplaceString.swift */; };
+		ACAA8FD4202234C9002C0A88 /* ReplaceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FD1202234C8002C0A88 /* ReplaceString.swift */; };
+		ACAA8FD5202234C9002C0A88 /* ReplaceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA8FD1202234C8002C0A88 /* ReplaceString.swift */; };
 		DD7502881C68FEDE006590AF /* iCalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* iCalKit.framework */; };
 		DD7502921C690C7A006590AF /* iCalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* iCalKit.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +123,12 @@
 		52D6D9E21BEFFF6E002C0205 /* iCalKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCalKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9F01BEFFFBE002C0205 /* iCalKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCalKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* iCalKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCalKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC32402F202238FE003965D7 /* EscapedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapedTests.swift; sourceTree = "<group>"; };
+		AC5E1B1D20225C5B00278318 /* escapedExample.ics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = escapedExample.ics; sourceTree = "<group>"; };
+		ACAA8FC220223110002C0A88 /* EscapeStringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeStringConstants.swift; sourceTree = "<group>"; };
+		ACAA8FC7202233FE002C0A88 /* ICALEscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICALEscape.swift; sourceTree = "<group>"; };
+		ACAA8FCC2022348C002C0A88 /* RFS5545Escape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFS5545Escape.swift; sourceTree = "<group>"; };
+		ACAA8FD1202234C8002C0A88 /* ReplaceString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceString.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* iCalKit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iCalKit.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* iCalKitTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iCalKitTests.plist; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* iCalKit-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iCalKit-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,8 +194,10 @@
 		41CE90041F5D572D00C50155 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AC5E1B1D20225C5B00278318 /* escapedExample.ics */,
 				41CE90051F5D572D00C50155 /* example.ics */,
 				41CE90061F5D572D00C50155 /* iCalKitTests.swift */,
+				AC32402F202238FE003965D7 /* EscapedTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -175,14 +205,16 @@
 		41CE90081F5D576800C50155 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				41CE900F1F5D576800C50155 /* iCal.swift */,
 				41CE90091F5D576800C50155 /* Alarm.swift */,
 				41CE900A1F5D576800C50155 /* Calendar.swift */,
+				41CE90151F5D579C00C50155 /* Enums */,
 				41CE900D1F5D576800C50155 /* Event.swift */,
+				41CE90141F5D579000C50155 /* Extensions */,
+				41CE900F1F5D576800C50155 /* iCal.swift */,
 				41CE90111F5D576800C50155 /* Parser.swift */,
 				41CE90131F5D578000C50155 /* Protocols */,
-				41CE90141F5D579000C50155 /* Extensions */,
-				41CE90151F5D579C00C50155 /* Enums */,
+				ACAA8FCC2022348C002C0A88 /* RFS5545Escape.swift */,
+				ACAA8FD1202234C8002C0A88 /* ReplaceString.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -190,8 +222,9 @@
 		41CE90131F5D578000C50155 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				41CE90101F5D576800C50155 /* IcsElement.swift */,
 				41CE900B1F5D576800C50155 /* CalendarComponent.swift */,
+				ACAA8FC7202233FE002C0A88 /* ICALEscape.swift */,
+				41CE90101F5D576800C50155 /* IcsElement.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -201,6 +234,7 @@
 			children = (
 				41CE90121F5D576800C50155 /* String.swift */,
 				41CE900C1F5D576800C50155 /* Date.swift */,
+				ACAA8FC220223110002C0A88 /* EscapeStringConstants.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -498,6 +532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5E1B1F20225C7D00278318 /* escapedExample.ics in Resources */,
 				41A675911F5D7EB800E8EC55 /* example.ics in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +562,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5E1B2120225C8000278318 /* escapedExample.ics in Resources */,
 				41A675901F5D7EB800E8EC55 /* example.ics in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +571,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5E1B2220225C8100278318 /* escapedExample.ics in Resources */,
 				41A6758F1F5D7EB800E8EC55 /* example.ics in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,11 +583,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAA8FCD2022348C002C0A88 /* RFS5545Escape.swift in Sources */,
+				ACAA8FD2202234C9002C0A88 /* ReplaceString.swift in Sources */,
 				41A675881F5D7C8500E8EC55 /* Event.swift in Sources */,
 				41A6758E1F5D7C8500E8EC55 /* iCalError.swift in Sources */,
 				41A675851F5D7C8500E8EC55 /* iCal.swift in Sources */,
 				41A6758A1F5D7C8500E8EC55 /* IcsElement.swift in Sources */,
 				41A675891F5D7C8500E8EC55 /* Parser.swift in Sources */,
+				ACAA8FC8202233FE002C0A88 /* ICALEscape.swift in Sources */,
+				ACAA8FC320223110002C0A88 /* EscapeStringConstants.swift in Sources */,
 				41A675871F5D7C8500E8EC55 /* Calendar.swift in Sources */,
 				41A6758B1F5D7C8500E8EC55 /* CalendarComponent.swift in Sources */,
 				41A6758C1F5D7C8500E8EC55 /* String.swift in Sources */,
@@ -564,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A675661F5D7C7B00E8EC55 /* iCalKitTests.swift in Sources */,
+				AC324030202238FE003965D7 /* EscapedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,11 +613,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAA8FCF2022348C002C0A88 /* RFS5545Escape.swift in Sources */,
+				ACAA8FD4202234C9002C0A88 /* ReplaceString.swift in Sources */,
 				41A675741F5D7C8400E8EC55 /* Event.swift in Sources */,
 				41A6757A1F5D7C8400E8EC55 /* iCalError.swift in Sources */,
 				41A675711F5D7C8400E8EC55 /* iCal.swift in Sources */,
 				41A675761F5D7C8400E8EC55 /* IcsElement.swift in Sources */,
 				41A675751F5D7C8400E8EC55 /* Parser.swift in Sources */,
+				ACAA8FCA202233FE002C0A88 /* ICALEscape.swift in Sources */,
+				ACAA8FC520223110002C0A88 /* EscapeStringConstants.swift in Sources */,
 				41A675731F5D7C8400E8EC55 /* Calendar.swift in Sources */,
 				41A675771F5D7C8400E8EC55 /* CalendarComponent.swift in Sources */,
 				41A675781F5D7C8400E8EC55 /* String.swift in Sources */,
@@ -588,11 +634,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAA8FD02022348C002C0A88 /* RFS5545Escape.swift in Sources */,
+				ACAA8FD5202234C9002C0A88 /* ReplaceString.swift in Sources */,
 				41A6756A1F5D7C8400E8EC55 /* Event.swift in Sources */,
 				41A675701F5D7C8400E8EC55 /* iCalError.swift in Sources */,
 				41A675671F5D7C8400E8EC55 /* iCal.swift in Sources */,
 				41A6756C1F5D7C8400E8EC55 /* IcsElement.swift in Sources */,
 				41A6756B1F5D7C8400E8EC55 /* Parser.swift in Sources */,
+				ACAA8FCB202233FE002C0A88 /* ICALEscape.swift in Sources */,
+				ACAA8FC620223111002C0A88 /* EscapeStringConstants.swift in Sources */,
 				41A675691F5D7C8400E8EC55 /* Calendar.swift in Sources */,
 				41A6756D1F5D7C8400E8EC55 /* CalendarComponent.swift in Sources */,
 				41A6756E1F5D7C8400E8EC55 /* String.swift in Sources */,
@@ -605,11 +655,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAA8FCE2022348C002C0A88 /* RFS5545Escape.swift in Sources */,
+				ACAA8FD3202234C9002C0A88 /* ReplaceString.swift in Sources */,
 				41A6757E1F5D7C8500E8EC55 /* Event.swift in Sources */,
 				41A675841F5D7C8500E8EC55 /* iCalError.swift in Sources */,
 				41A6757B1F5D7C8400E8EC55 /* iCal.swift in Sources */,
 				41A675801F5D7C8500E8EC55 /* IcsElement.swift in Sources */,
 				41A6757F1F5D7C8500E8EC55 /* Parser.swift in Sources */,
+				ACAA8FC9202233FE002C0A88 /* ICALEscape.swift in Sources */,
+				ACAA8FC420223110002C0A88 /* EscapeStringConstants.swift in Sources */,
 				41A6757D1F5D7C8500E8EC55 /* Calendar.swift in Sources */,
 				41A675811F5D7C8500E8EC55 /* CalendarComponent.swift in Sources */,
 				41A675821F5D7C8500E8EC55 /* String.swift in Sources */,
@@ -623,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A675651F5D7C7B00E8EC55 /* iCalKitTests.swift in Sources */,
+				AC5E1B292022645E00278318 /* EscapedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A675641F5D7C7A00E8EC55 /* iCalKitTests.swift in Sources */,
+				AC5E1B2A2022645F00278318 /* EscapedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
