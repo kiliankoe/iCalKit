@@ -18,3 +18,20 @@ extension String {
         return iCal.dateFormatter.date(from: self)
     }
 }
+
+extension String {
+    
+    func replacingEscapeOccurrences(_ using: [SubstituteEscapeString])  -> String {
+        
+        var updatedString = self
+        
+        using.forEach {
+            updatedString = updatedString.replacingOccurrences(of: $0.encoded,
+                                                               with: $0.decoded,
+                                                               options: .caseInsensitive)
+        }
+        
+        return updatedString
+    }
+}
+
